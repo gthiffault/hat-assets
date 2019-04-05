@@ -56,4 +56,31 @@
 			}
 		}	
 	}
+	margin-bottom: 120px;
 }
+
+
+
+
+
+
+.c-comment {
+	li {
+		margin-bottom: 16px;
+		background: #eff1f3;
+		padding: 16px;
+		border-radius: 12px;
+		font-size: 14px;
+	}
+}
+
+
+
+.js-hidden,
+.c-comments_view {
+	display: none;
+	&.-visible {
+		display: block;
+	}
+}
+

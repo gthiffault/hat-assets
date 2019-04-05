@@ -1,5 +1,4 @@
 example.html
-*.css
 *.gz
 node_modules/
 bower_components/
