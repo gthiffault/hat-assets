@@ -49,5 +49,5 @@ if($('body').hasClass('testimonialsList')) {
         $('.c-comments_view').on('click',function() {
             $('.js-hidden').addClass('-visible')
         })
-    },1000);
+    },2000);
 }
