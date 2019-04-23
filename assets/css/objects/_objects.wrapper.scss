@@ -6,7 +6,7 @@
  * Page-level constraining and wrapping elements.
  */
 
-$inuit-wrapper-width: 1600px !default;
+$inuit-wrapper-width: 1298px !default;
 
 @if (type-of($inuit-wrapper-width) != number) {
   @error "`#{$inuit-wrapper-width}` needs to be a number.";

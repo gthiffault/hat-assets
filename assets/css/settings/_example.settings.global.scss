@@ -13,4 +13,31 @@ $global-radius: 3px !default;
 $global-transition: all 300ms ease-in-out !default;
 
 
-$bgZero: #f1f1f1;
+$bgZero: #E7ECF3;
+$bgOne: #FBFBFB;
+$bgTwo: #F9EDEC;
+$colorPaleOne: #FFF;
+$colorDarkOne: #1A1A1A;
+$colorDarkTwo: #606063;
+
+// FONTS
+$fontDefault: montserrat, sans-serif;
+
+//TYPOGRAPHIES
+p,li,span {
+	color: $colorDarkTwo;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 26px;
+}
+
+html {
+	background-color: $bgOne;
+	main {
+		a {
+			color: $colorDarkOne;
+			// text-decoration: none;
+		}
+	}	
+}
+

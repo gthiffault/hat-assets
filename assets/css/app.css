@@ -71,6 +71,17 @@
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
  * Hide.................Helper classes to hide content
  */
+p, li, span {
+  color: #606063;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 26px; }
+
+html {
+  background-color: #FBFBFB; }
+  html main a {
+    color: #1A1A1A; }
+
 /* ==========================================================================
    #BOX-SIZING
    ========================================================================== */
@@ -580,9 +591,10 @@ html {
  * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
  */
 h1 {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.16667; }
+  -webkit-text-stroke: #000;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  font-size: 64px; }
 
 h2 {
   font-size: 28px;
@@ -656,7 +668,7 @@ table {
   padding-left: 24px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1600px; }
+  max-width: 1298px; }
   .o-wrapper:after {
     content: "" !important;
     display: block !important;
@@ -1569,24 +1581,28 @@ table {
     .c-btn--ghost.c-btn--tertiary:hover, .c-btn--ghost.c-btn--tertiary:focus {
       color: #fff; }
 
-.c-header_navigation_secondary .c-navigation_secondary {
-  text-align: right; }
-  .c-header_navigation_secondary .c-navigation_secondary ul {
-    margin-bottom: 0;
-    padding: 8px 0; }
-    .c-header_navigation_secondary .c-navigation_secondary ul li {
-      display: inline-block;
-      margin-right: 32px; }
-      .c-header_navigation_secondary .c-navigation_secondary ul li:last-child {
-        margin-right: 0; }
-      .c-header_navigation_secondary .c-navigation_secondary ul li a {
-        font-family: brandon-grotesque, sans-serif;
-        font-size: 20px;
-        color: #505C68;
-        text-decoration: none; }
+.c-header_navigation_secondary {
+  background-color: #1A1A1A; }
+  .c-header_navigation_secondary .c-navigation_secondary {
+    text-align: right; }
+    .c-header_navigation_secondary .c-navigation_secondary ul {
+      margin-bottom: 0;
+      padding: 3px 0; }
+      .c-header_navigation_secondary .c-navigation_secondary ul li {
+        display: inline-block;
+        margin-right: 40px; }
+        .c-header_navigation_secondary .c-navigation_secondary ul li:last-child {
+          margin-right: 0; }
+        .c-header_navigation_secondary .c-navigation_secondary ul li a {
+          color: #FFF;
+          font-family: 'Open sans', sans-serif;
+          font-size: 12px;
+          font-weight: 100;
+          letter-spacing: 2px;
+          line-height: 28px;
+          text-decoration: none; }
 
 .c-header_navigation_primary {
-  background-color: #f1f1f1;
   margin-bottom: 120px; }
   .c-header_navigation_primary .c-header_flex {
     display: -webkit-box;
@@ -1605,8 +1621,8 @@ table {
           -ms-flex-align: center;
               align-items: center; }
     .c-header_navigation_primary .c-header_flex .c-header_logo {
-      padding: 10px 0;
-      margin-right: auto; }
+      margin-right: auto;
+      padding: 24px 0; }
       .c-header_navigation_primary .c-header_flex .c-header_logo img {
         max-width: 320px; }
     .c-header_navigation_primary .c-header_flex .c-navigation_primary ul {
@@ -1617,9 +1633,11 @@ table {
         .c-header_navigation_primary .c-header_flex .c-navigation_primary ul li:last-child {
           margin-right: 0; }
         .c-header_navigation_primary .c-header_flex .c-navigation_primary ul li a {
-          font-family: brandon-grotesque, sans-serif;
-          font-size: 24px;
-          color: #505C68;
+          color: #1A1A1A;
+          font-family: montserrat, sans-serif;
+          font-size: 18px;
+          letter-spacing: 2px;
+          line-height: 28px;
           text-decoration: none; }
 
 .c-comment li {
@@ -1636,8 +1654,84 @@ table {
   .c-comments_view.-visible {
     display: block; }
 
-.c-testimonials_id {
+.pageslug-testimonialsList .c-testimonials_single {
+  margin-bottom: 114px; }
+  .pageslug-testimonialsList .c-testimonials_single .c-testimonials_id {
+    display: none; }
+  .pageslug-testimonialsList .c-testimonials_single .-img {
+    padding-right: 100px; }
+  .pageslug-testimonialsList .c-testimonials_single .o-layout__item {
+    width: 50%; }
+  .pageslug-testimonialsList .c-testimonials_single h1 {
+    padding-left: 24px; }
+  .pageslug-testimonialsList .c-testimonials_single .c-testimonials_date {
+    color: #1A1A1A;
+    margin-bottom: 0;
+    padding-left: 24px; }
+  .pageslug-testimonialsList .c-testimonials_single .c-testimonials_content {
+    margin-bottom: 56px;
+    padding-left: 24px; }
+  .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction {
+    background: #E7ECF3;
+    padding: 56px 64px; }
+    .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction p {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 38px; }
+    .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul {
+      margin: 0; }
+      .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul li {
+        display: block;
+        padding-left: 48px;
+        position: relative; }
+        .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul li:hover {
+          cursor: pointer; }
+        .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul li:before {
+          position: absolute;
+          content: "";
+          background: url("../img/icons/humain-avant-tout_sprite.svg");
+          left: 0;
+          height: 24px;
+          width: 24px; }
+        .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul li:first-child {
+          border-bottom: 1px solid #1A1A1A;
+          margin-bottom: 16px;
+          padding-bottom: 16px; }
+        .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul li:last-child:before {
+          background-position: -36px 0; }
+        .pageslug-testimonialsList .c-testimonials_single .c-testimonials_interaction ul li:after {
+          position: absolute;
+          content: "";
+          background: url("../img/icons/humain-avant-tout_sprite.svg");
+          height: 24px;
+          margin-top: 2px;
+          right: 0;
+          width: 17px;
+          background-position: -72px 0; }
+
+.c-comment li {
+  margin-bottom: 16px;
+  background: #eff1f3;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px; }
+
+.js-hidden,
+.c-comments_view {
   display: none; }
+  .js-hidden.-visible,
+  .c-comments_view.-visible {
+    display: block; }
+
+footer {
+  background: #F9EDEC;
+  padding: 24px 0; }
+  footer .c-footer_copyright {
+    font-size: 16px;
+    line-height: 24px; }
+  footer picture {
+    margin-right: 24px; }
 
 /* ==========================================================================
    #CLEARFIX

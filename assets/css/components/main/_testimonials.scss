@@ -1,3 +1,102 @@
-.c-testimonials_id {
+.pageslug-testimonialsList {
+	.c-testimonials_single {
+		margin-bottom: 114px;
+		.c-testimonials_id {
+			display: none;
+		}		
+		.-img{
+			padding-right: 100px;
+		}	
+		.o-layout__item {
+			width: 50%;
+		}
+		h1 {
+			padding-left: 24px;
+		}
+		.c-testimonials_date {
+			color: $colorDarkOne;
+			margin-bottom: 0;
+			padding-left: 24px;	
+		}		
+		.c-testimonials_content {
+			margin-bottom: 56px;
+			padding-left: 24px;		
+
+		}
+		.c-testimonials_interaction {
+			background: $bgZero;
+			padding: 56px 64px;
+			p {
+				font-size: 26px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				line-height: 38px;
+			}
+			ul {
+				margin: 0;
+				li {
+					display: block;
+					padding-left: 48px;
+					position: relative;
+					&:hover {
+						cursor: pointer;
+					}
+					&:before {
+						position: absolute;
+						content: "";
+						background: url('../img/icons/humain-avant-tout_sprite.svg');
+						left: 0;
+						height:24px;						
+						width: 24px;
+					}
+					&:first-child {
+						border-bottom: 1px solid $colorDarkOne;
+						margin-bottom: 16px;
+						padding-bottom: 16px;
+						&:before {
+							
+						}
+					}
+					&:last-child {
+						&:before {
+							background-position: -36px 0;
+						}
+					}
+					&:after {
+						position: absolute;
+						content: "";
+						background: url('../img/icons/humain-avant-tout_sprite.svg');
+						height: 24px;
+						margin-top: 2px;
+						right: 0;
+						width: 17px;
+						background-position: -72px 0;						
+					}					
+				}
+			}
+		}
+	}	
+}
+
+
+
+
+.c-comment {
+	li {
+		margin-bottom: 16px;
+		background: #eff1f3;
+		padding: 16px;
+		border-radius: 12px;
+		font-size: 14px;
+	}
+}
+
+
+
+.js-hidden,
+.c-comments_view {
 	display: none;
+	&.-visible {
+		display: block;
+	}
 }

@@ -21,7 +21,10 @@ $inuit-font-size-h5:  18px !default;
 $inuit-font-size-h6:  16px !default;
 
 h1 {
-  @include inuit-font-size($inuit-font-size-h1);
+    -webkit-text-stroke: #000;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    font-size: 64px;
 }
 
 h2 {
