@@ -58,7 +58,7 @@ if($('body').hasClass('pageslug-testimonialsList')) {
         FB.api(
             postID,
             'GET',
-            {access_token:'EAAHWLrDxevoBAI9d1szobASuNTBlLVhVPBJ5svU5t0d5ZAUk2CKvsZCR5bFaZAOuKk4bw9eKedFe76hgzXofKJbWxIc4ZBGzeg7chzpmB77ohrUuAR0FA5Y98BZAGYfLTOmsDaL3Nuv9q1ZC26onCfinLnIkRyjSaUUSbV6jbUWCzwmBnnEuIyZCgJMUikS2kPBahZAitMETxR0BrAgZB1fEdItZBudyVBFDnQKEMBHWURBQZDZD',
+            {access_token:'EAAHWLrDxevoBADVfAzXQK9CQtgthjLcctb4Y4TjbI1txujowv7Rgl3EdTGQX01mJ785r93W1qqOdNDFJPqAtDlmCetL2rR34tTHDBmSvv2EZAGrYk6slOaIYZAkwnOMrTHg6aFVksGnT3DiU5PDkzAmUWmTThyol9h15bZAoY8ZBUvGYBQrzU85FYawXZCuTaVSc74LVqbQPQXZCYtCMrQ027ovqMWBcyiRhb9PWlTLgZDZD',
             fields:"comments.limit(10000){message,attachment,created_time}"},
             function (response) {
                 if (response && !response.error) {
