@@ -58,7 +58,7 @@ if($('body').hasClass('pageslug-testimonialsList')) {
         FB.api(
             postID,
             'GET',
-            {access_token:'EAAHWLrDxevoBADVfAzXQK9CQtgthjLcctb4Y4TjbI1txujowv7Rgl3EdTGQX01mJ785r93W1qqOdNDFJPqAtDlmCetL2rR34tTHDBmSvv2EZAGrYk6slOaIYZAkwnOMrTHg6aFVksGnT3DiU5PDkzAmUWmTThyol9h15bZAoY8ZBUvGYBQrzU85FYawXZCuTaVSc74LVqbQPQXZCYtCMrQ027ovqMWBcyiRhb9PWlTLgZDZD',
+            {access_token:'EAAHWLrDxevoBAALa3ehAkD2llIFqaqIycTX6gXEzwW5Uo1mZBwkpIHrnHWoiDn2OflEhCQF1Gk7RwkpkuRZCFkZCKkxnZAZAHSBvhTxpCLm1l8HCLpt4hZCUBaO8a96QiAskanpxze9zdxbZAIqDJFfi54zYN9W2HF9DclMYQZCs2rWYAvZA3zHgRXu0qpk0ZBPrXU6iAmxAasaK5iUtvaATATg2xl1kDZBU7dbM0SBFCqLUgZDZD',
             fields:"comments.limit(10000){message,attachment,created_time}"},
             function (response) {
                 if (response && !response.error) {
@@ -83,12 +83,12 @@ if($('body').hasClass('pageslug-testimonialsList')) {
 
 if($(array[x]['attachment']).length) { 
     if($(array[x]['attachment']['type'] == "sticker")) { 
-        $('.c-comment').append($('<li>').append('<small>' + date.getDate() + '.' + (date.getMonth('F') + 1)  + '.' +  date.getFullYear() + '</small>' + '<p>' +  '<img src="' + array[x]['attachment']['target']['url']  + '"></p>')); 
+        $('.c-comments_ul').append($('<li class="c-comments_li">').append('<small>' + date.getDate() + '.' + (date.getMonth('F') + 1)  + '.' +  date.getFullYear() + '</small>' + '<p>' +  '<img src="' + array[x]['attachment']['target']['url']  + '"></p>')); 
     } else {
-        $('.c-comment').append($('<li>').append('<small>' + date.getDate() + '.' + (date.getMonth('F') + 1)  + '.' +  date.getFullYear() + '</small>' + '<p>' +  array[x]['message']  + '</p>'));        
+        $('.c-comments_ul').append($('<li class="c-comments_li">').append('<small>' + date.getDate() + '.' + (date.getMonth('F') + 1)  + '.' +  date.getFullYear() + '</small>' + '<p>' +  array[x]['message']  + '</p>'));        
     }
 } else {
-$('.c-comment').append($('<li>').append('<small>' + date.getDate() + '.' + (date.getMonth('F') + 1)  + '.' +  date.getFullYear() + '</small>' + '<p>' +  array[x]['message']  + '</p>'));                    
+$('.c-comments_ul').append($('<li class="c-comments_li">').append('<small>' + date.getDate() + '.' + (date.getMonth('F') + 1)  + '.' +  date.getFullYear() + '</small>' + '<p>' +  array[x]['message']  + '</p>'));                    
 }
 
 
