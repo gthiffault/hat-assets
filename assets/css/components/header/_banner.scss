@@ -1,0 +1,12 @@
+.c-banner {
+	&.-page {
+		height: 616px;
+		background: #2f2f2f;
+		.c-header_background-hero {
+			height: 616px;
+			background-size: cover !important;
+			position: relative;
+		}
+	}
+	margin-bottom:124px;
+}

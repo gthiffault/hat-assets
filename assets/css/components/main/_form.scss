@@ -1,0 +1,33 @@
+.c-testimonials_form {
+	background: $bgThree;
+	padding: 40px 72px;
+	margin-top: -32px;
+	.c-form_btn {
+		text-align: right;
+	}
+}
+
+.-form {
+	input[type="text"] {
+		height: 48px;
+	}
+	textarea {
+		resize: none;
+	}
+	textarea,
+	input[type="text"] {
+		width: 100%;
+		border: none !important;
+		margin-bottom: 20px;
+		background: $colorPaleOne;
+		&:focus {
+			outline: none;
+		}
+	}
+	label {
+		font-size: 14px;
+		letter-spacing: 1px;
+		margin-bottom: 8px;
+		display: inline-block;
+	}
+}

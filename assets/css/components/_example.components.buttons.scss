@@ -25,7 +25,6 @@
   cursor: pointer; /* [5] */
   padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
   transition: $global-transition;
-  border-radius: $global-radius;
 }
 
 
@@ -36,7 +35,8 @@
    ========================================================================== */
 
 .c-btn--primary {
-  background-color: #4a8ec2;
+  background-color: $colorDarkOne;
+  border: none;
 
   &,
   &:hover,

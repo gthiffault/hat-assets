@@ -22,13 +22,49 @@ $inuit-font-size-h6:  16px !default;
 
 h1 {
     -webkit-text-stroke: #000;
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
+    color: $colorDarkOne;
+    // -webkit-text-stroke-width: 2px;
     font-size: 64px;
+    font-family: nunito, sans-serif;
+    font-weight: 400;
 }
 
 h2 {
-  @include inuit-font-size($inuit-font-size-h2);
+    -webkit-text-stroke: #FFF;
+    color: #FFF;
+    // -webkit-text-stroke-width: 2px;
+    stop-color: #FFF;
+    font-size: 72px;
+    font-family: nunito, sans-serif;
+    font-weight: 400;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    TRANSFORM: translate(-50%,-50%);
+    left: 50%;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 91px;
+        height: 64px;
+        background: red;
+        top: -64px;
+        left: 50%;
+        margin-left: -44px;
+        background: url('../img/icons/humain-avant-tout_sprite.svg') 0 -24px;
+    }
+    &:after {
+position: absolute;
+    content: "";
+    width: 91px;
+    height: 64px;
+    background: red;
+    bottom: -88px;
+    left: 50%;
+    margin-left: -44px;
+    background: url(../img/icons/humain-avant-tout_sprite.svg) 0 64px;
+}
+   
 }
 
 h3 {

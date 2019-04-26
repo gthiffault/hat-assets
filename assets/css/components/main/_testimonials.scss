@@ -70,7 +70,14 @@
 						margin-top: 2px;
 						right: 0;
 						width: 17px;
-						background-position: -72px 0;						
+						background-position: -72px 0;		
+						transform: rotateZ(90deg);		
+						transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+					}
+					&.-js-visibles-comments {
+						&:after {
+							transform: rotateZ(270deg);
+						}	
 					}					
 				}
 			}
@@ -79,24 +86,28 @@
 }
 
 
+.c-testimonials_comments {
+	padding: 8px 72px 40px;
+	background: $colorPaleOne;
 
 
-.c-comment {
-	li {
-		margin-bottom: 16px;
-		background: #eff1f3;
-		padding: 16px;
-		border-radius: 12px;
-		font-size: 14px;
+.c-comments_ul {
+	.c-comments_li {
+		padding: 32px 0 16px;
+		border-bottom: 1px solid $colorDarkOne;
+		&:last-child {
+			border-bottom: none;
+			p {
+				margin-bottom: 0;
+			}
+		}
 	}
+}
 }
 
 
 
-.js-hidden,
-.c-comments_view {
+.c-comments {
 	display: none;
-	&.-visible {
-		display: block;
-	}
 }
+
