@@ -36,6 +36,11 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
     		//EMOJI PICKER
 		//**********************************************************************
 			(function(){this.EmojiPicker=function(){function e(e){var o,i;null==e&&(e={}),$.emojiarea.iconSize=null!=(o=e.iconSize)?o:25,$.emojiarea.assetsPath=null!=(i=e.assetsPath)?i:"",this.generateEmojiIconSets(e),e.emojiable_selector||(e.emojiable_selector="[data-emojiable=true]"),this.options=e}return e.prototype.discover=function(){if(!(/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream))return $(this.options.emojiable_selector).emojiarea($.extend({emojiPopup:this,norealTime:!0},this.options))},e.prototype.generateEmojiIconSets=function(e){var o,i,n,t,r,a,c,s,f;for(t={},c={},f=o=s=i=a=r=n=void 0,r=0;r<Config.EmojiCategories.length;){for(f=Config.EmojiCategorySpritesheetDimens[r][1],n=0;n<Config.EmojiCategories[r].length;)a=(i=Config.Emoji[Config.EmojiCategories[r][n]])[1][0],s=Math.floor(n/f),o=n%f,t[":"+a+":"]=[r,s,o,":"+a+":"],c[a]=i[0],n++;r++}return $.emojiarea.icons=t,$.emojiarea.reverseIcons=c},e.prototype.colonToUnicode=function(e){return e?(Config.rx_colons||Config.init_unified(),e.replace(Config.rx_colons,function(e){return Config.mapcolon[e]||""})):""},e.prototype.appendUnicodeAsImageToElement=function(e,o){var i,n,t,r,a;if(!o)return"";for(Config.rx_codes||Config.init_unified(),i=0,n=(t=o.split(Config.rx_codes)).length;i<n;i++)r=t[i],a="",Config.rx_codes.test(r)?(a=Config.reversemap[r])&&(a=":"+a+":",a=$.emojiarea.createIcon($.emojiarea.icons[a])):a=document.createTextNode(r),e.append(a);return o.replace(Config.rx_codes,function(e){return(a=Config.reversemap[e])?(a=":"+a+":",$.emojiarea.createIcon($.emojiarea.icons[a])):""})},e.prototype.colonToImage=function(e){return e?(Config.rx_colons||Config.init_unified(),e.replace(Config.rx_colons,function(e){return e?$.emojiarea.createIcon($.emojiarea.icons[e]):""})):""},e}()}).call(this);
+
+
+
+
+			
 //****************************************************************************//
     //TESTIMONIALS - COMMENTS
 //****************************************************************************//
@@ -119,3 +124,34 @@ $("#c-testimonials_image").stick_in_parent({
         // It can be called as many times as necessary; previously converted input fields will not be converted again
         window.emojiPicker.discover();
       });
+
+               var connection = window.navigator.connection    ||
+                          window.navigator.mozConnection ||
+                          null;
+         if (connection === null) {
+            document.getElementById('ni-unsupported').classList.remove('hidden');
+         } else if ('metered' in connection) {
+            document.getElementById('nio-supported').classList.remove('hidden');
+            [].slice.call(document.getElementsByClassName('old-api')).forEach(function(element) {
+               element.classList.remove('hidden');
+            });
+ 
+            var bandwidthValue = document.getElementById('b-value');
+            var meteredValue = document.getElementById('m-value');
+ 
+            connection.addEventListener('change', function (event) {
+               bandwidthValue.innerHTML = connection.bandwidth;
+               meteredValue.innerHTML = (connection.metered ? '' : 'not ') + 'metered';
+            });
+            connection.dispatchEvent(new Event('change'));
+         } else {
+            var typeValue = document.getElementById('t-value');
+            [].slice.call(document.getElementsByClassName('new-api')).forEach(function(element) {
+               element.classList.remove('hidden');
+            });
+ 
+            connection.addEventListener('typechange', function (event) {
+               typeValue.innerHTML = connection.type;
+            });
+            connection.dispatchEvent(new Event('typechange'));
+         }

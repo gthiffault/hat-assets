@@ -15,3 +15,34 @@ $("#c-testimonials_image").stick_in_parent({
         // It can be called as many times as necessary; previously converted input fields will not be converted again
         window.emojiPicker.discover();
       });
+
+               var connection = window.navigator.connection    ||
+                          window.navigator.mozConnection ||
+                          null;
+         if (connection === null) {
+            document.getElementById('ni-unsupported').classList.remove('hidden');
+         } else if ('metered' in connection) {
+            document.getElementById('nio-supported').classList.remove('hidden');
+            [].slice.call(document.getElementsByClassName('old-api')).forEach(function(element) {
+               element.classList.remove('hidden');
+            });
+ 
+            var bandwidthValue = document.getElementById('b-value');
+            var meteredValue = document.getElementById('m-value');
+ 
+            connection.addEventListener('change', function (event) {
+               bandwidthValue.innerHTML = connection.bandwidth;
+               meteredValue.innerHTML = (connection.metered ? '' : 'not ') + 'metered';
+            });
+            connection.dispatchEvent(new Event('change'));
+         } else {
+            var typeValue = document.getElementById('t-value');
+            [].slice.call(document.getElementsByClassName('new-api')).forEach(function(element) {
+               element.classList.remove('hidden');
+            });
+ 
+            connection.addEventListener('typechange', function (event) {
+               typeValue.innerHTML = connection.type;
+            });
+            connection.dispatchEvent(new Event('typechange'));
+         }

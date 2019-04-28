@@ -594,7 +594,7 @@ h1 {
   -webkit-text-stroke: #000;
   color: #1A1A1A;
   font-size: 64px;
-  font-family: nunito, sans-serif;
+  font-family: montserrat, sans-serif;
   font-weight: 400; }
 
 h2 {
@@ -602,7 +602,7 @@ h2 {
   color: #FFF;
   stop-color: #FFF;
   font-size: 72px;
-  font-family: nunito, sans-serif;
+  font-family: montserrat, sans-serif;
   font-weight: 400;
   position: absolute;
   position: absolute;
@@ -629,6 +629,28 @@ h2 {
     left: 50%;
     margin-left: -44px;
     background: url(../img/icons/humain-avant-tout_sprite.svg) 0 64px; }
+
+.c-page-title {
+  -webkit-text-stroke: #FFF;
+  color: #FFF;
+  stop-color: #FFF;
+  font-size: 72px;
+  letter-spacing: 2px;
+  font-family: montserrat, sans-serif;
+  font-weight: 400;
+  text-align: left;
+  position: static;
+  top: none;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  left: none;
+  width: 100%;
+  line-height: inherit;
+  width: 520px;
+  line-height: 72px; }
+  .c-page-title:before, .c-page-title:after {
+    display: none; }
 
 h3 {
   font-size: 24px;
@@ -3832,6 +3854,25 @@ img.emoji {
       height: 616px;
       background-size: cover !important;
       position: relative; }
+  .c-banner.-home {
+    height: calc(100vh - 34px);
+    background: #2f2f2f; }
+    .c-banner.-home .c-header_background-hero {
+      height: calc(100vh - 34px);
+      background-size: cover !important;
+      position: relative; }
+      .c-banner.-home .c-header_background-hero .o-wrapper {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 34px); }
+      .c-banner.-home .c-header_background-hero .c-banner_content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        left: 50%; }
 
 .pageslug-testimonialsList .c-testimonials_single {
   margin-bottom: 114px; }

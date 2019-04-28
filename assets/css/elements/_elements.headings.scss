@@ -25,7 +25,7 @@ h1 {
     color: $colorDarkOne;
     // -webkit-text-stroke-width: 2px;
     font-size: 64px;
-    font-family: nunito, sans-serif;
+    font-family: $fontDefault;
     font-weight: 400;
 }
 
@@ -35,7 +35,7 @@ h2 {
     // -webkit-text-stroke-width: 2px;
     stop-color: #FFF;
     font-size: 72px;
-    font-family: nunito, sans-serif;
+    font-family: $fontDefault;
     font-weight: 400;
     position: absolute;
     position: absolute;
@@ -66,6 +66,35 @@ position: absolute;
 }
    
 }
+
+
+.c-page-title {
+    -webkit-text-stroke: #FFF;
+    color: #FFF;
+    // -webkit-text-stroke-width: 2px;
+    stop-color: #FFF;
+    font-size: 72px;
+    letter-spacing: 2px;
+    font-family: $fontDefault;
+    font-weight: 400;  
+      text-align: left;
+    position: static;
+    top: none;
+    transform: none;
+    left: none;
+    width: 100%;
+    line-height: inherit;
+    width: 520px;
+    line-height: 72px;
+  &:before,
+  &:after {
+    display:none;
+
+  }
+}
+
+
+
 
 h3 {
   @include inuit-font-size($inuit-font-size-h3);
