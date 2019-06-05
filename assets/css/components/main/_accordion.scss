@@ -1,0 +1,52 @@
+.c-accordion {
+	padding: 88px 0;
+	&.-faq,
+	&.-media,
+	&.-resources {
+		background: $bgOne;
+	}
+	&.-about,
+	&.-resources {
+		ul {
+			li {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	ul {
+		margin: 0;
+		li {	
+			list-style-type: none;
+			.c-accordion_title {
+				border-bottom: 2px solid $borderZero;
+				h3 {
+					margin: 40px 0;
+					&:hover {
+						cursor: pointer;
+					}
+				}		
+			}
+			.c-accordion_content_wrap {
+				display: none;
+			.c-accordion_content {
+				padding-top: 32px;
+				padding-bottom: 1px;
+				margin-bottom: -25px;
+				
+			}
+		}
+			&:first-child {
+				.c-accordion_title:first-child h3 {
+					margin-top: 0;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+				.c-accordion_content {
+					padding-bottom: 1px;
+				}
+			}			
+		}
+	}
+}

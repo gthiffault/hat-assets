@@ -1,0 +1,35 @@
+.c-list {
+ 	background: $bgZero;
+ 	padding-top: 88px;
+ 	text-align: center;
+ 	padding-bottom: 64px;
+ 	&.-testimonials {
+ 		background: $bgOne;
+
+ 		padding-bottom: 88px;
+ 	}
+ 	h2 {
+ 		text-align: center;
+ 		margin-bottom: 72px;
+ 	}
+ 	.c-btn {
+ 		text-align: center;
+ 		margin: 0 auto;
+ 		display: inline-block;
+ 	}
+ 	&.-home {
+ 		.c-list_ul {
+ 			margin-bottom: 24px;
+ 			li {
+ 				margin-bottom: 40px;
+ 			}
+ 		}
+ 	}
+	figure {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		img {
+			width: 100%;
+		}
+	} 	
+}

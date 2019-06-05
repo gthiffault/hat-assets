@@ -20,25 +20,60 @@ $bgThree: #F0F0F0;
 $colorPaleOne: #FFF;
 $colorDarkOne: #1A1A1A;
 $colorDarkTwo: #606063;
+$borderZero: #979797;
 
 // FONTS
 $fontDefault: montserrat, sans-serif;
+$fontSecond: 'Sacramento', cursive;
 
 //TYPOGRAPHIES
 p,li,span {
 	color: $colorDarkTwo;
-	font-size: 14px;
+	font-size: 16px;
 	letter-spacing: 1px;
-	line-height: 26px;
+	line-height: 32px;
 }
 
 html {
-	background-color: $bgOne;
+	color: $colorDarkTwo;
 	main {
 		a {
 			color: $colorDarkOne;
 			// text-decoration: none;
 		}
 	}	
+}
+
+
+
+
+
+@mixin grid() {
+    display: grid;
+    grid-gap: 0;
+	.c-content_wrap {
+		display: grid;
+		align-items: center !important;
+		justify-items: center !important;
+		background: $bgThree;
+		.c-content {
+			position: relative;
+			z-index: 1;
+			margin: 110px 0;
+			width: 125%;
+			width: calc(100% + 25%);
+			background: $colorPaleOne;
+			padding: 80px 64px 40px 64px;
+		}
+		.-b {
+			.c-content {
+				margin-left: -25%;
+			}
+		}
+	}
+	.c-image {
+    	background-size: cover !important;
+      	background-position: center center !important; 
+    }
 }
 

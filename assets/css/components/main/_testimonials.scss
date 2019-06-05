@@ -12,6 +12,7 @@
 		}
 		h1 {
 			padding-left: 24px;
+			margin-bottom: 40px;
 		}
 		.c-testimonials_date {
 			color: $colorDarkOne;
@@ -21,7 +22,77 @@
 		.c-testimonials_content {
 			margin-bottom: 56px;
 			padding-left: 24px;		
-
+			.c-content {
+				position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				background: url('../img/icons/humain-avant-tout_sprite.svg');
+				width: 134px;
+				height: 86px;
+				left: -56px;
+				top: -32px;
+				background-position: -222px 0;
+				z-index: -1;
+			}
+			&:after {
+				position: absolute;
+				content: "";
+				background: url('../img/icons/humain-avant-tout_sprite.svg');
+				width: 134px;
+				height: 86px;
+				right: 0px;
+				bottom: -32px;
+				background-position: -372px 0;
+				z-index: -1;
+			}	
+			}
+			h4 {
+				margin-bottom: 12px;
+			}
+			.c-testimonials_resources {
+				margin-left: 0;
+				> li {
+					list-style-type: none;
+					border-top: 1px solid $borderZero;
+					padding-top: 40px;
+					margin-bottom: 40px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					p {
+						margin-bottom: 12px;
+					}
+			.c-resources-sm {
+				margin-left: 0;
+				li {
+					list-style-type: none;
+					display: inline-block;
+					margin-right: 24px;
+					&.c-resources-sm_web {
+						a {
+							background: url(../img/icons/humain-avant-tout_sprite.svg);
+							width: 25px;
+							height: 25px;
+							background-position: -63px -68px;
+							display: block;
+							text-indent: -999999px;
+						}	
+					}
+					&.c-resources-sm_fb {
+						a {
+							background: url(../img/icons/humain-avant-tout_sprite.svg);
+							width: 10px;
+							height: 23px;
+							background-position: -104px -67px;
+							display: block;
+							text-indent: -999999px;
+						}	
+					}					
+				}
+			}
+			}		
+		}
 		}
 		.c-testimonials_interaction {
 			background: $bgZero;

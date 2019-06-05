@@ -3,6 +3,12 @@ $("#c-testimonials_image").stick_in_parent({
 	sticky_class:"c-element-fixed"
 });
 
+// JQUERY
+$('.c-accordion_title').on('click', function() {
+$(this).next('.c-accordion_content_wrap').slideToggle(400);
+$(this).toggleClass('-js-accordion-active')
+}) 
+
       $(function() {
         // Initializes and creates emoji set from sprite sheet
         window.emojiPicker = new EmojiPicker({

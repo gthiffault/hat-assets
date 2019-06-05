@@ -144,6 +144,15 @@ $inuit-use-markup-fix: false !default;
 
 }
 
+.o-layout--medium {
+  margin-left: -40px;
+
+  > .o-layout__item {
+    padding-left: 40px;
+  }
+
+}
+
 
 .o-layout--large {
   margin-left: -$inuit-global-spacing-unit-large;
@@ -154,6 +163,14 @@ $inuit-use-markup-fix: false !default;
 
 }
 
+.o-layout--xlarge {
+  margin-left: -80px;
+
+  > .o-layout__item {
+    padding-left: 80px;
+  }
+
+}
 
 .o-layout--huge {
   margin-left: -$inuit-global-spacing-unit-huge;
@@ -305,4 +322,11 @@ $inuit-use-markup-fix: false !default;
     width: auto;
   }
 
+}
+
+
+.o-layout--equal-height {
+    display: block; /* [1] */
+    display: flex;
+    flex-wrap: wrap;
 }

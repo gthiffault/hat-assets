@@ -25,58 +25,93 @@ h1 {
     color: $colorDarkOne;
     // -webkit-text-stroke-width: 2px;
     font-size: 64px;
-    font-family: $fontDefault;
+    font-family: 'Sacramento', cursive;
     font-weight: 400;
 }
-
-h2 {
+h2,
+.c-accordion h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.c-header_banner h2 {
     -webkit-text-stroke: #FFF;
     color: #FFF;
     // -webkit-text-stroke-width: 2px;
     stop-color: #FFF;
     font-size: 72px;
-    font-family: $fontDefault;
+    font-family: 'Sacramento', cursive;
     font-weight: 400;
     position: absolute;
     position: absolute;
     top: 50%;
-    TRANSFORM: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
     left: 50%;
+    &:after,
     &:before {
         position: absolute;
         content: "";
-        width: 91px;
-        height: 64px;
-        background: red;
-        top: -64px;
         left: 50%;
-        margin-left: -44px;
-        background: url('../img/icons/humain-avant-tout_sprite.svg') 0 -24px;
+        background: url('../img/icons/humain-avant-tout_sprite.svg');
+        transform: translate(-50%,0);
     }
-    &:after {
-position: absolute;
-    content: "";
-    width: 91px;
-    height: 64px;
-    background: red;
-    bottom: -88px;
-    left: 50%;
-    margin-left: -44px;
-    background: url(../img/icons/humain-avant-tout_sprite.svg) 0 64px;
 }
-   
+
+.pageslug-about {
+    $pageslug-aboutIconHeight: 123px;
+    $pageslug-aboutIconWidth: 137px;
+    .c-header_banner {
+        h2 {
+            &:before {
+                width: $pageslug-aboutIconWidth;
+                height: $pageslug-aboutIconHeight;
+                top: calc(-#{$pageslug-aboutIconWidth} - 32px);
+                background-position: 0 -109px;
+            }
+            &:after {
+                width: $pageslug-aboutIconWidth;
+                height: $pageslug-aboutIconHeight;
+                bottom: calc(-#{$pageslug-aboutIconWidth} - 32px);
+                background-position: 0 -248px;
+            }
+        }
+    }
 }
+.pageslug-testimonials {
+    $pageslug-testimonialsIconHeight: 92px;
+    $pageslug-testimonialsIconWidth: 127px;
+    .c-header_banner {
+        h2 {
+            &:before {
+                width: $pageslug-testimonialsIconWidth;
+                height: $pageslug-testimonialsIconHeight;
+                top: calc(-#{$pageslug-testimonialsIconWidth} - 16px);
+                background-position: 0 -387px;
+            }
+            &:after {
+                width: $pageslug-testimonialsIconWidth;
+                height: $pageslug-testimonialsIconHeight;
+                bottom: calc(-#{$pageslug-testimonialsIconWidth} - 16px);
+                background-position: 0 -495px;
+            }
+        }
+    }
+}
+
 
 
 .c-page-title {
     -webkit-text-stroke: #FFF;
     color: #FFF;
+    font-family: 'Montserrat', sans-serif;
     // -webkit-text-stroke-width: 2px;
     stop-color: #FFF;
-    font-size: 72px;
+    font-size: 56px;
     letter-spacing: 2px;
     font-family: $fontDefault;
-    font-weight: 400;  
+    font-weight: 600;  
       text-align: left;
     position: static;
     top: none;
@@ -84,8 +119,8 @@ position: absolute;
     left: none;
     width: 100%;
     line-height: inherit;
-    width: 520px;
-    line-height: 72px;
+    width: 720px;
+    line-height: 64px;
   &:before,
   &:after {
     display:none;
@@ -101,11 +136,18 @@ h3 {
 }
 
 h4 {
-  @include inuit-font-size($inuit-font-size-h4);
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 32px;
 }
 
 h5 {
   @include inuit-font-size($inuit-font-size-h5);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 h6 {

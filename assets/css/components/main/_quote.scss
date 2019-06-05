@@ -1,0 +1,38 @@
+.c-quote {
+	text-align: center;
+	padding: 96px 0 96px;
+	.c-quote_wrap {
+		position: relative;
+		p {
+			font-size: 40px;
+			line-height: 48px;
+			display: inline-block;
+			margin-bottom: 0;
+			font-style: italic;
+		}
+		&:before {
+			content: " «";
+		    left: -102px;
+		}
+		&:before,		
+		&:after {
+			position: absolute;
+			color: #EBEFF5;
+			font-size:220px;
+			z-index: -1;	
+			top: 50%;
+			transform: translate(0,-50%);	
+			font-style: italic;
+			margin-top: -24px;
+		}
+		&:after {
+			content: "»";
+		    right: -94px;
+		}			
+	}
+	.c-quote_author {
+		margin-top: 24px;
+		font-size: 24px;
+		margin-bottom: 0;
+	}	
+}

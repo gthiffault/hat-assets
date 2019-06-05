@@ -1,4 +1,5 @@
 .c-banner {
+	margin-bottom:88px;
 	&.-page {
 		height: 616px;
 		background: #2f2f2f;
@@ -18,16 +19,20 @@
 			.o-wrapper {
 				position: relative;
 				width: 100%;
-							height: calc(100vh - 34px);
+				height: calc(100vh - 34px);
 			}
 			.c-banner_content {
 				width: 100%;
 				position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    left: 50%;
+    			top: 50%;
+    			transform: translate(-50%,-50%);
+    			left: 50%;
+    			.c-page-subtitle {
+    				font-size: 56px;
+    				color: $colorPaleOne;
+    				font-family: $fontSecond;
+    			}
 			}
 		}
-	}	
-	margin-bottom:124px;
+	}		
 }

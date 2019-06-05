@@ -13,10 +13,30 @@ $inuit-wrapper-width: 1298px !default;
 }
 
 .o-wrapper {
-  @include inuit-clearfix();
-  padding-right: $inuit-global-spacing-unit;
-  padding-left:  $inuit-global-spacing-unit;
-  margin-right: auto;
-  margin-left:  auto;
-  max-width: $inuit-wrapper-width;
+	@include inuit-clearfix();
+	padding-right: $inuit-global-spacing-unit;
+	padding-left:  $inuit-global-spacing-unit;
+	margin-right: auto;
+	margin-left:  auto;
+	max-width: $inuit-wrapper-width;
+	&.-one {
+		max-width: 664px;
+	}
+	&.-two {
+		max-width: 649px;
+		width: 100%;
+		&.-a {
+			margin-right: 0;
+			padding-right: 0;
+		}  
+		&.-b {
+			margin-left: 0;
+			padding-left: 0;
+		}    
+	}
+	&.-three {
+		max-width: 1138px;
+	}
 }
+
+
