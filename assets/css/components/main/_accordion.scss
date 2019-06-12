@@ -22,13 +22,37 @@
 				border-bottom: 2px solid $borderZero;
 				h3 {
 					margin: 40px 0;
+					position: relative;
+					padding-right: 40px;
 					&:hover {
 						cursor: pointer;
 					}
-				}		
+					&:after {
+						position: absolute;
+						content: '';
+						width: 24px;
+						height: 23px;
+						right: 16px;
+						background: url('../img/icons/humain-avant-tout_sprite.svg');
+						background-position: -801px 0;
+					    top: 6px;
+    					transform: rotate(90deg);
+    					transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+					}
+				}	
+				&.-js-accordion-active {
+				h3 {
+&:after {
+	transform: rotate(-90deg);
+					}
+				}					
+				}	
 			}
 			.c-accordion_content_wrap {
 				display: none;
+				&.-displayed {
+					display: block;
+				}
 			.c-accordion_content {
 				padding-top: 32px;
 				padding-bottom: 1px;

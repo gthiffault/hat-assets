@@ -28,8 +28,7 @@ h1 {
     font-family: 'Sacramento', cursive;
     font-weight: 400;
 }
-h2,
-.c-accordion h3 {
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     line-height: 44px;
@@ -67,18 +66,19 @@ h2,
             &:before {
                 width: $pageslug-aboutIconWidth;
                 height: $pageslug-aboutIconHeight;
-                top: calc(-#{$pageslug-aboutIconWidth} - 32px);
+                top: calc(-#{$pageslug-aboutIconWidth} - 18px);
                 background-position: 0 -109px;
             }
             &:after {
                 width: $pageslug-aboutIconWidth;
                 height: $pageslug-aboutIconHeight;
-                bottom: calc(-#{$pageslug-aboutIconWidth} - 32px);
+                bottom: calc(-#{$pageslug-aboutIconWidth} - 18px);
                 background-position: 0 -248px;
             }
         }
     }
 }
+
 .pageslug-testimonials {
     $pageslug-testimonialsIconHeight: 92px;
     $pageslug-testimonialsIconWidth: 127px;
@@ -87,20 +87,62 @@ h2,
             &:before {
                 width: $pageslug-testimonialsIconWidth;
                 height: $pageslug-testimonialsIconHeight;
-                top: calc(-#{$pageslug-testimonialsIconWidth} - 16px);
+                top: calc(-#{$pageslug-testimonialsIconWidth} + 3px);
                 background-position: 0 -387px;
             }
             &:after {
                 width: $pageslug-testimonialsIconWidth;
                 height: $pageslug-testimonialsIconHeight;
-                bottom: calc(-#{$pageslug-testimonialsIconWidth} - 16px);
+                bottom: calc(-#{$pageslug-testimonialsIconWidth} + 3px);
                 background-position: 0 -495px;
             }
         }
     }
 }
 
+.pageslug-resources,
+.pageslug-media,
+.pageslug-faq {
+    $pageslug-testimonialsIconHeight: 111px;
+    $pageslug-testimonialsIconWidth: 142px;
+    .c-header_banner {
+        h2 {
+            &:before {
+                width: $pageslug-testimonialsIconWidth;
+                height: $pageslug-testimonialsIconHeight;
+                top: calc(-#{$pageslug-testimonialsIconWidth} - 2px);
+                background-position: -153px -109px;
+            }
+            &:after {
+                width: $pageslug-testimonialsIconWidth;
+                height: $pageslug-testimonialsIconHeight;
+                bottom: calc(-#{$pageslug-testimonialsIconWidth} - 2px);
+                background-position: -153px -235px;
+            }
+        }
+    }
+}
 
+.pageslug-contact {
+    $pageslug-testimonialsIconHeight: 119px;
+    $pageslug-testimonialsIconWidth: 131px;
+    .c-header_banner {
+        h2 {
+            &:before {
+                width: $pageslug-testimonialsIconWidth;
+                height: $pageslug-testimonialsIconHeight;
+                top: calc(-#{$pageslug-testimonialsIconWidth} - 20px);
+                background-position: -311px -109px;
+            }
+            &:after {
+                width: $pageslug-testimonialsIconWidth;
+                height: $pageslug-testimonialsIconHeight;
+                bottom: calc(-#{$pageslug-testimonialsIconWidth} - 20px);
+                background-position: -311px -244px;
+            }
+        }
+    }
+}
 
 .c-page-title {
     -webkit-text-stroke: #FFF;
@@ -132,12 +174,16 @@ h2,
 
 
 h3 {
-  @include inuit-font-size($inuit-font-size-h3);
+     font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 h4 {
-    font-size: 26px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 24px;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: 32px;

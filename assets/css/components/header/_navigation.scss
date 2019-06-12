@@ -323,3 +323,115 @@ img.emoji {
 .emoji-menu a .label {
     display: none;
 }
+
+.c-sidebar {
+	position: fixed;
+	top: 320px;
+	width: 54px;
+	height: 178px;
+	background: $colorDarkOne;
+	right: 0;
+	z-index: 4;
+	padding: 32px 0;
+	.c-sidebar_ul {
+		position: relative;
+		z-index: 6;
+		.c-sidebar_item {
+			line-height: 0;
+			margin-bottom: 23px;
+			text-align: center;
+			a {
+				background: url(../img/icons/humain-avant-tout_sprite.svg);
+				width: 25px;
+				height: 23px;
+				display: inline-block;
+				text-indent: -999999px;
+			}
+			&.-facebook {
+				a {
+					background-position: -161px -68px;
+				}
+			}
+			&.-instagram {
+				a {
+					background-position: -130px -68px;
+					width: 22px;
+				}
+			}	
+			&.-emergency {
+				a {
+					background-position: -194px -68px;
+					height: 22px;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}						
+		}
+	}
+	.c-emergency_info {
+		position: absolute;
+		width: 54px;
+		height: 178px;
+		background: $colorDarkOne;
+		top: 50%;
+		transform: translate(0,-50%);
+		z-index: 3;
+		transition: height 0.3s 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955), width 0.5s 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		right: 0;
+		overflow: hidden;
+		.c-emergency_info_content {
+			position: relative;
+						padding: 40px 70px 40px 48px;
+			left: 0;
+			opacity: 0;
+			transition: opacity 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+			span {
+				width: 100%;
+				display: block;
+			}
+			.c-emergency_title {
+
+				line-height: 18px;
+				letter-spacing: 1px;
+				font-weight: 600;
+				&.-main {
+					text-transform: uppercase;
+					margin-bottom: 20px;
+				}
+
+			}
+
+							p {
+					margin-bottom: 0;
+				}
+			.c-emergency_ul {
+				margin-bottom: 0;
+			li {
+				margin-bottom: 16px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			}			
+			* {
+				color: #FFF;
+				font-size: 12px;
+				line-height: 18px;
+			}			
+		}
+		&.js-active {
+			height: 329px;
+			width: 385px;
+			transition: height 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), width 0.5s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+			.c-emergency_info_content {
+
+			left: 0px;
+			opacity: 1;
+			transition: opacity 0.4s 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+
+		}			
+		}
+	}
+}

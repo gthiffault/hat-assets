@@ -64,3 +64,29 @@ $('.c-comments_toggle').on('click', function() {
     $('.c-comments').slideToggle(400);
     $(this).toggleClass('-js-visibles-comments');
 })
+
+
+$('.-emergency a').on('click', function() {
+    $('.c-emergency_info').toggleClass('js-active');
+})
+$('#form').submit(function(ev) {
+    // Prevent the form from actually submitting
+    ev.preventDefault();
+
+    // Send it to the server
+    $.post({
+        url: '/',
+        dataType: 'json',
+        data: $(this).serialize(),
+        success: function(response) {
+            if (response.success) {
+                $('#thanks').fadeIn();
+                alert('32453');
+            } else {
+                // response.error will be an object containing any validation errors that occurred, indexed by field name
+                // e.g. response.error.fromName => ['From Name is required']
+                alert('An error occurred. Please try again.');
+            }
+        }
+    });
+});

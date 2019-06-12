@@ -117,20 +117,20 @@
 						content: "";
 						background: url('../img/icons/humain-avant-tout_sprite.svg');
 						left: 0;
-						height:24px;						
-						width: 24px;
+						height:25px;						
+						width: 25px;
 					}
 					&:first-child {
 						border-bottom: 1px solid $colorDarkOne;
 						margin-bottom: 16px;
 						padding-bottom: 16px;
 						&:before {
-							
+							background-position: -841px 0;
 						}
 					}
 					&:last-child {
 						&:before {
-							background-position: -36px 0;
+							background-position: -881px 0;
 						}
 					}
 					&:after {
