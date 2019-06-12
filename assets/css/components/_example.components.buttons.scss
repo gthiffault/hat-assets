@@ -60,20 +60,22 @@
   padding: 0;
      text-decoration: none;
     color: $colorDarkOne;
-    font-size: 20px;
-    line-height: 28px; 
+    font-size: 18px;
+    border: 1px solid $colorDarkOne;
+    line-height: 26px; 
         padding: 12px 40px 12px 20px;
         position: relative;
         &:after {
           opacity: 0;
             background: url('../img/icons/humain-avant-tout_sprite.svg');
-            background-position: -801px 0;
+            background-position: -922px 0;
                         width: 24px;
             height: 23px;
             right: 16px;
             position: absolute;
             content: "";          
-            top: 16px;
+            top: 10px;
+            transform: rotate(-90deg);
             transition: right 0.2s linear, opacity 0.24s linear;
         }
   &,
