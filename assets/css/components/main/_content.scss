@@ -11,31 +11,31 @@
 	}
 	.c-content-icon {
 		margin: 0 auto 40px auto;
-		&.-home {
-			background: url('../img/icons/humain-avant-tout_sprite.svg') 0 0;
-			width: 46px;
-			height: 77px;
-		}
-		&.-testimonials {
-			background: url('../img/icons/humain-avant-tout_sprite.svg') -522px 0;
-			width: 57px;
-			height: 57px;			
-		}
-		&.-resources,
-		&.-media {
+		// &.-home {
+		// 	background: url('../img/icons/humain-avant-tout_sprite.svg') 0 0;
+		// 	width: 46px;
+		// 	height: 77px;
+		// }
+		// &.-testimonials {
+		// 	background: url('../img/icons/humain-avant-tout_sprite.svg') -522px 0;
+		// 	width: 57px;
+		// 	height: 57px;			
+		// }
+		// &.-resources,
+		// &.-media {
 			background: url('../img/icons/humain-avant-tout_sprite.svg') -595px 0;
 			width: 55px;
 			height: 66px;			
-		}	
-		&.-contact {
-			background: url('../img/icons/humain-avant-tout_sprite.svg') -666px 0;
-			width: 43px;
-			height: 84px;			
-		}	
-		&.-faq {
-			background: url('../img/icons/humain-avant-tout_sprite.svg') -725px 0;
-			width: 60px;
-			height: 57px;			
-		}						
+		// }	
+		// &.-contact {
+		// 	background: url('../img/icons/humain-avant-tout_sprite.svg') -666px 0;
+		// 	width: 43px;
+		// 	height: 84px;			
+		// }	
+		// &.-faq {
+		// 	background: url('../img/icons/humain-avant-tout_sprite.svg') -725px 0;
+		// 	width: 60px;
+		// 	height: 57px;			
+		// }						
 	}
 }

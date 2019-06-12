@@ -4,11 +4,12 @@
 	.c-quote_wrap {
 		position: relative;
 		p {
-			font-size: 40px;
-			line-height: 48px;
+			font-size: 56px;
+			line-height: 64px;
 			display: inline-block;
 			margin-bottom: 0;
 			font-style: italic;
+			font-family: "Sacramento", cursive;
 		}
 		&:before {
 			content: " «";

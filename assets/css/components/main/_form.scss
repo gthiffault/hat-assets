@@ -45,9 +45,12 @@
 
 
 .c-form {
-	background: $bgZero;
-	padding-top: 72px;
-	padding-bottom: 106px;
+
+	&.-contact {
+		background: $bgZero;
+		padding-top: 72px;
+		padding-bottom: 106px;		
+	}
 	.c-form_btn {
 		text-align: right;
 
