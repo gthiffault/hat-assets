@@ -23,6 +23,10 @@ $colorDarkTwo: #606063;
 $borderZero: #979797;
 $borderOne : #2A2A2A;
 
+// ICONS
+
+$sprite : url('../img/icons/humain-avant-tout_sprite.svg');
+
 // FONTS
 $fontDefault: montserrat, sans-serif;
 $fontSecond: 'Sacramento', cursive;
@@ -78,3 +82,26 @@ html {
     }
 }
 
+@mixin title($height,$width,$positionsx,$positionsy,$positionex,$positioney) {
+    $pageslug-aboutIconHeight: $height;
+    $pageslug-aboutIconWidth: $width;
+    $asdf: (107px/2) + 23px;
+    $asdf2: (107px/2) + 22px;
+    .c-header_banner {
+        h2 {
+            &:after {
+                background-position: $positionsx $positionsy;            	
+                height: $pageslug-aboutIconHeight;
+                top: $asdf2;
+                width: $pageslug-aboutIconWidth;
+            }        	
+            &:before {
+                background-position: $positionex $positioney;
+                bottom: $asdf;
+                height: $pageslug-aboutIconHeight;
+                width: $pageslug-aboutIconWidth;
+            }
+
+        }
+    }
+}

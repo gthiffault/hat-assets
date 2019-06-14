@@ -1,39 +1,39 @@
 .c-quote {
-	text-align: center;
 	padding: 96px 0 96px;
+	text-align: center;
+	.c-quote_author {
+		font-size: 24px;
+		margin-bottom: 0;
+		margin-top: 24px;
+	}	
 	.c-quote_wrap {
 		position: relative;
 		p {
-			font-size: 56px;
-			line-height: 64px;
 			display: inline-block;
-			margin-bottom: 0;
-			font-style: italic;
 			font-family: "Sacramento", cursive;
-		}
-		&:before {
-			content: " «";
-		    left: -102px;
+			font-size: 56px;
+			font-style: italic;
+			line-height: 64px;
+			margin-bottom: 0;
 		}
 		&:before,		
 		&:after {
-			position: absolute;
 			color: #EBEFF5;
 			font-size:220px;
-			z-index: -1;	
-			top: 50%;
-			transform: translate(0,-50%);	
 			font-style: italic;
 			margin-top: -24px;
+			position: absolute;
+			top: 50%;
+			transform: translate(0,-50%);	
+			z-index: -1;	
+		}		
+		&:before {
+			content: " «";
+		    left: -102px;
 		}
 		&:after {
 			content: "»";
 		    right: -94px;
 		}			
-	}
-	.c-quote_author {
-		margin-top: 24px;
-		font-size: 24px;
-		margin-bottom: 0;
 	}	
 }

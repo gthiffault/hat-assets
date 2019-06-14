@@ -1,39 +1,40 @@
 .c-banner {
 	margin-bottom:88px;
-	&.-page {
-		height: 616px;
-		background: #2f2f2f;
-		.c-header_background-hero {
-			height: 616px;
-			background-size: cover !important;
-			position: relative;
-		}
-	}
 	&.-home {
-		height: calc(100vh - 34px);
 		background: #2f2f2f;
+		height: calc(100vh - 34px);
 		.c-header_background-hero {
-			height: calc(100vh - 34px);
 			background-size: cover !important;
+			height: calc(100vh - 34px);
 			position: relative;
-			.o-wrapper {
-				position: relative;
-				width: 100%;
-				height: calc(100vh - 34px);
-			}
 			.c-banner_content {
-				width: 100%;
 				position: absolute;
-    			top: 50%;
-    			transform: translate(-50%,-50%);
+				width: 100%;
     			left: 50%;
     			margin-left: 24px;
+    			top: 50%;
+    			transform: translate(-50%,-50%);
     			.c-page-subtitle {
-    				font-size: 56px;
     				color: $colorPaleOne;
     				font-family: $fontSecond;
+    				font-size: 56px;
     			}
+			}			
+			.o-wrapper {
+				height: calc(100vh - 34px);
+				position: relative;
+				width: 100%;
 			}
+
+		}
+	}	
+	&.-page {
+		background: #2f2f2f;
+		height: 616px;
+		.c-header_background-hero {
+			background-size: cover !important;
+			height: 616px;
+			position: relative;
 		}
 	}		
 }

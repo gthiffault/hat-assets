@@ -13,55 +13,52 @@
 			}
 		}
 	}
-
 	ul {
 		margin: 0;
-		li {	
+		li {
 			list-style-type: none;
-			.c-accordion_title {
-				border-bottom: 2px solid $borderZero;
-				h3 {
-					margin: 32px 0;
-					position: relative;
-					padding-right: 40px;
-				    font-size: 24px;
-    				line-height: 32px;
-					&:hover {
-						cursor: pointer;
-					}
-					&:after {
-						position: absolute;
-						content: '';
-						width: 24px;
-						height: 23px;
-						right: 16px;
-						background: url('../img/icons/humain-avant-tout_sprite.svg');
-						background-position: -801px 0;
-					    top: 6px;
-    					transform: rotate(90deg);
-    					transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-					}
-				}	
-				&.-js-accordion-active {
-				h3 {
-&:after {
-	transform: rotate(-90deg);
-					}
-				}					
-				}	
-			}
 			.c-accordion_content_wrap {
 				display: none;
 				&.-displayed {
 					display: block;
 				}
-			.c-accordion_content {
-				padding-top: 32px;
-				padding-bottom: 1px;
-				margin-bottom: -25px;
-				
+				.c-accordion_content {
+					padding-top: 32px;
+					padding-bottom: 1px;
+					margin-bottom: -25px;
+				}
+			}			
+			.c-accordion_title {
+				border-bottom: 2px solid $borderZero;
+				h3 {
+					margin: 32px 0;
+					padding-right: 40px;
+					position: relative;
+				    font-size: 24px;
+    				line-height: 32px;
+					&:after {
+						background: $sprite -801px 0;
+						content: '';
+						height: 23px;
+						position: absolute;
+						right: 16px;
+						width: 24px;
+					    top: 6px;
+    					transform: rotate(90deg);
+    					transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+					}
+					&:hover {
+						cursor: pointer;
+					}					
+				}	
+				&.-js-accordion-active {
+					h3 {
+						&:after {
+							transform: rotate(-90deg);
+						}
+					}					
+				}	
 			}
-		}
 			&:first-child {
 				.c-accordion_title:first-child h3 {
 					margin-top: 0;

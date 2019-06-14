@@ -5,12 +5,16 @@
 		.c-content_text {
 			margin-bottom: 64px;
 		}		
-	}		
-	.c-content_wrapper  {
-		text-align: center;
 	}
 	.c-content-icon {
+		background: url('../img/icons/humain-avant-tout_sprite.svg') -595px 0;
+		height: 66px;			
 		margin: 0 auto 40px auto;
+		width: 55px;
+		// &.-resources,
+		// &.-media {
+		
+		// }		
 		// &.-home {
 		// 	background: url('../img/icons/humain-avant-tout_sprite.svg') 0 0;
 		// 	width: 46px;
@@ -21,12 +25,7 @@
 		// 	width: 57px;
 		// 	height: 57px;			
 		// }
-		// &.-resources,
-		// &.-media {
-			background: url('../img/icons/humain-avant-tout_sprite.svg') -595px 0;
-			width: 55px;
-			height: 66px;			
-		// }	
+	
 		// &.-contact {
 		// 	background: url('../img/icons/humain-avant-tout_sprite.svg') -666px 0;
 		// 	width: 43px;
@@ -37,5 +36,8 @@
 		// 	width: 60px;
 		// 	height: 57px;			
 		// }						
+	}			
+	.c-content_wrapper  {
+		text-align: center;
 	}
 }
