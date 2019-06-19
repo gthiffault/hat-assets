@@ -1,3 +1,38 @@
+/* ==========================================================================
+    #BARBA.JS 
+========================================================================== */
+
+  /* ======================================================================
+      #EXTENDED PAGE
+    ====================================================================== */ 
+
+    var page = Barba.BaseView.extend({
+
+      namespace: 'page',
+
+      /* ==============================================================
+          #ON ENTER 
+        ============================================================== */
+      
+          onEnter: function() {
+
+              TweenLite.to($('.barba-container'), 0, {
+
+                  opacity: 1
+
+              });  
+
+        },
+
+      /* ==============================================================
+          #ON ENTER COMPLETED
+        ============================================================== */
+
+        onEnterCompleted: function() {
+
+          $('html,body').animate({scrollTop:0},100);
+
+
 //****************************************************************************//
     //TESTIMONIALS - COMMENTS
 //****************************************************************************//
@@ -161,7 +196,7 @@ $('#form').submit(function(ev) {
                 triggerElement: '.o-wrapper.-two.-a',
                 duration: $('.o-wrapper.-two.-a').height()
             })
-            .setTween(TweenMax.to('.o-wrapper.-two.-a .c-content', 1, {y: '-100%', ease: Linear.easeNone}))
+            .setTween(TweenMax.to('.o-wrapper.-two.-a .c-content', 1, {y: '-75%', ease: Linear.easeNone}))
             .addTo(controllerOne);
         }        
 
@@ -212,82 +247,238 @@ $('#form').submit(function(ev) {
 
         
 
-        var scrollMagicController = new ScrollMagic.Controller();
+//         var scrollMagicController = new ScrollMagic.Controller();
 
-$('.c-btn_div .-first').each(function() {
-  var currentElem = this;
+// $('.c-btn_div .-first').each(function() {
+//   var currentElem = this;
 
-  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
-    y: '100%',
-  });
-  var scene = new ScrollMagic.Scene({
-      triggerElement: currentElem,
-      triggerHook: 'onEnter',
-      offset: 100,
-      duration: currentElem,
-      ease: Power0.easeInOut
-    })
-    .setTween(tweenButton)
-    .addTo(scrollMagicController);
-});
-
-
-$('.c-btn_div .-second').each(function() {
-  var currentElem = this;
-
-  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
-    x: '-100%'
-  });
-  var scene = new ScrollMagic.Scene({
-      triggerElement: currentElem,
-      triggerHook: 'onEnter',
-      offset: 100,
-      duration: currentElem,
-      ease: Power0.easeInOut
-    })
-    .setTween(tweenButton)
-    .addTo(scrollMagicController);
-});
+//   var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+//     y: '100%',
+//   });
+//   var scene = new ScrollMagic.Scene({
+//       triggerElement: currentElem,
+//       triggerHook: 'onEnter',
+//       offset: 100,
+//       duration: currentElem,
+//       ease: Power0.easeInOut
+//     })
+//     .setTween(tweenButton)
+//     .addTo(scrollMagicController);
+// });
 
 
-$('.c-btn_div .-third').each(function() {
-  var currentElem = this;
+// $('.c-btn_div .-second').each(function() {
+//   var currentElem = this;
 
-  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
-    y: '-100%'
-  });
-  var scene = new ScrollMagic.Scene({
-      triggerElement: currentElem,
-      triggerHook: 'onEnter',
-      offset: 100,
-      duration: currentElem,
-      ease: Power0.easeInOut
-    })
-    .setTween(tweenButton)
-    .addTo(scrollMagicController);
-});
+//   var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+//     x: '-100%'
+//   });
+//   var scene = new ScrollMagic.Scene({
+//       triggerElement: currentElem,
+//       triggerHook: 'onEnter',
+//       offset: 100,
+//       duration: currentElem,
+//       ease: Power0.easeInOut
+//     })
+//     .setTween(tweenButton)
+//     .addTo(scrollMagicController);
+// });
 
-$('.c-btn_div .-four').each(function() {
-  var currentElem = this;
 
-  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
-    x: '100%'
-  });
-  var scene = new ScrollMagic.Scene({
-      triggerElement: currentElem,
-      triggerHook: 'onEnter',
-      offset: 100,
-      duration: currentElem,
-      ease: Power0.easeInOut
-    })
-    .setTween(tweenButton)
-    .addTo(scrollMagicController);
-});
+// $('.c-btn_div .-third').each(function() {
+//   var currentElem = this;
+
+//   var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+//     y: '-100%'
+//   });
+//   var scene = new ScrollMagic.Scene({
+//       triggerElement: currentElem,
+//       triggerHook: 'onEnter',
+//       offset: 100,
+//       duration: currentElem,
+//       ease: Power0.easeInOut
+//     })
+//     .setTween(tweenButton)
+//     .addTo(scrollMagicController);
+// });
+
+// $('.c-btn_div .-four').each(function() {
+//   var currentElem = this;
+
+//   var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+//     x: '100%'
+//   });
+//   var scene = new ScrollMagic.Scene({
+//       triggerElement: currentElem,
+//       triggerHook: 'onEnter',
+//       offset: 100,
+//       duration: currentElem,
+//       ease: Power0.easeInOut
+//     })
+//     .setTween(tweenButton)
+//     .addTo(scrollMagicController);
+// });
 
 }());
 
 
 
+$("#c-testimonials_image").stick_in_parent({
+    offset_top:124,
+    sticky_class:"c-element-fixed"
+});
+
+// JQUERY
+$('.c-accordion_title').on('click', function() {
+$(this).next('.c-accordion_content_wrap').slideToggle(400);
+$(this).toggleClass('-js-accordion-active')
+}) 
 
 
-        
+
+if($('c-testimonials_form').length) {
+     $(function() {
+       window.emojiPicker = new EmojiPicker({
+         emojiable_selector: '[data-emojiable=true]',
+         assetsPath: 'https://humain-avant-tout.agencezel.dev/assets/img/emoji/',
+         popupButtonClasses: 'fa fa-smile-o'
+       });
+     });
+
+              var connection = window.navigator.connection    ||
+                         window.navigator.mozConnection ||
+                         null;
+        if (connection === null) {
+           document.getElementById('ni-unsupported').classList.remove('hidden');
+        } else if ('metered' in connection) {
+           document.getElementById('nio-supported').classList.remove('hidden');
+           [].slice.call(document.getElementsByClassName('old-api')).forEach(function(element) {
+              element.classList.remove('hidden');
+           });
+ 
+           var bandwidthValue = document.getElementById('b-value');
+           var meteredValue = document.getElementById('m-value');
+ 
+           connection.addEventListener('change', function (event) {
+              bandwidthValue.innerHTML = connection.bandwidth;
+              meteredValue.innerHTML = (connection.metered ? '' : 'not ') + 'metered';
+           });
+           connection.dispatchEvent(new Event('change'));
+        } else {
+           var typeValue = document.getElementById('t-value');
+           [].slice.call(document.getElementsByClassName('new-api')).forEach(function(element) {
+              element.classList.remove('hidden');
+           });
+ 
+           connection.addEventListener('typechange', function (event) {
+              typeValue.innerHTML = connection.type;
+           });
+           connection.dispatchEvent(new Event('typechange'));
+        }
+
+}
+
+          
+        },
+
+      /* ==============================================================
+        #ON LEAVE
+        ============================================================== */
+
+          onLeave: function() {
+              // A new Transition toward a new page has just started.
+        },
+
+      /* ==============================================================
+        #ON LEAVE COMPLETED
+        ============================================================== */
+
+          onLeaveCompleted: function() {
+
+          }
+
+    });
+/* ==================================================================
+      #INIT PAGE 
+      ================================================================== */     
+
+      // Don't forget to init the view!
+      page.init();
+
+      $(document).ready(function() {
+          Barba.Pjax.start();
+      })
+
+  /* ==================================================================
+      #TRANSITION
+      ================================================================== */ 
+
+      /* ==============================================================
+        #BARBA TRANSITION
+        ============================================================== */
+
+        var FadeTransition = Barba.BaseTransition.extend({
+
+            start: function() {
+                Promise
+                  .all([this.newContainerLoading, this.fadeOut()])
+                  .then(this.fadeIn.bind(this));
+            },
+
+            fadeOut: function() {
+       return $(this.oldContainer).animate({ opacity: 1 }, 1000).promise();
+
+            },
+
+            fadeIn: function() {
+                var _this = this;
+                var $el = $(this.newContainer);
+                $(function() {});
+                _this.done();
+            }
+
+        });
+
+        Barba.Pjax.getTransition = function() {
+            return FadeTransition;
+        };
+
+    /* ==================================================================
+        #INIT STATE CHANGE
+      ================================================================== */
+
+      Barba.Dispatcher.on('initStateChange', function(currentStatus) {
+
+
+
+      })
+/* ==================================================================
+        #TRANSITION COMPLETED
+      ================================================================== */   
+
+      Barba.Dispatcher.on('transitionCompleted', function(currentStatus, prevStatus) {
+/* ==================================================================
+            #TRANSITION
+          ================================================================== */
+
+
+            TweenLite.to($('.c-title_top'), 0.5, {
+              opacity:1,
+              marginBottom:0,
+              zIndex:9999,
+              ease: Sine.easeOut, 
+              delay: 0.4, 
+            }); 
+
+
+            TweenLite.to($('.c-title_bottom'), 0.5, {
+              opacity:1,
+              marginTop:0,
+              zIndex:9999,
+              ease: Sine.easeOut, 
+              delay: 0.4, 
+            });               
+
+
+
+      })  

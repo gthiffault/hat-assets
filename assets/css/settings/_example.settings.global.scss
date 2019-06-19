@@ -89,19 +89,33 @@ html {
     $asdf2: (107px/2) + 22px;
     .c-header_banner {
         h2 {
-            &:after {
+            .c-title_bottom {
                 background-position: $positionsx $positionsy;            	
                 height: $pageslug-aboutIconHeight;
                 top: $asdf2;
                 width: $pageslug-aboutIconWidth;
+                margin-top: 40%;
+                opacity: 0;
             }        	
-            &:before {
+            .c-title_top {
                 background-position: $positionex $positioney;
                 bottom: $asdf;
                 height: $pageslug-aboutIconHeight;
                 width: $pageslug-aboutIconWidth;
+                margin-bottom: 40%;
+                opacity: 0;
             }
 
         }
     }
+}
+
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 500ms 2s;
 }
