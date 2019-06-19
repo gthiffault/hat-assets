@@ -19,8 +19,13 @@
                 grid-row-start: 1; 
     		}
        		.c-image {
+                background: $bgTwo;
         		grid-column-start: 2;
         		grid-row-start: 1; 
+                overflow: hidden;
+                div {
+                    background-size: cover !important;
+                }
         	} 
         }
 	}
@@ -45,8 +50,13 @@
     			grid-row-start: 1; 
     		}
   			.c-image {
+                 background: $bgThree;
     			grid-column-start: 1;
     			grid-row-start: 1; 
+                overflow: hidden;
+                div {
+                    background-size: cover !important;
+                }                
     		} 
     	}		
 	}	

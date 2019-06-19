@@ -58,13 +58,13 @@ html {
     grid-gap: 0;
 	.c-content_wrap {
 		display: grid;
-		align-items: center !important;
+		align-items: flex-end !important;
 		justify-items: center !important;
 		background: $bgThree;
 		.c-content {
 			position: relative;
 			z-index: 1;
-			margin: 110px 0;
+			margin: 110px 0 0 0;
 			width: 125%;
 			width: calc(100% + 25%);
 			background: $colorPaleOne;

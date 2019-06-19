@@ -38,6 +38,7 @@
   background-color: $colorDarkOne;
   border: none;
 
+
   &,
   &:hover,
   &:active,
@@ -53,6 +54,48 @@
 
 }
 
+.c-btn_div {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  span.-first {
+    position: absolute;
+    width: 1px;
+    background-color: $colorDarkOne;
+    left: 0;
+    bottom: 0;
+    top: 0;
+      transition: 0.1s ease all;
+  }
+    span.-second {
+    position: absolute;
+    height: 1px;
+    background-color: $colorDarkOne;
+    right:0;
+    left: 0;
+    top: 0;
+      transition: 0.2s 0.1s ease all;
+  }
+  span.-third {
+    position: absolute;
+    width: 1px;
+    background-color: $colorDarkOne;
+    right: 0;
+    bottom: 0;
+    top: 0;
+      transition: 0.1s 0.3s ease all;
+  }  
+  span.-four {
+    position: absolute;
+    height: 1px;
+    background-color: $colorDarkOne;
+    right: 0;
+    left: 0;
+    bottom: 0;
+      transition: 0.2s 0.4s ease all;
+  }    
+}
+
 
 .c-btn--main {
   background-color: transparent;
@@ -61,7 +104,7 @@
      text-decoration: none;
     color: $colorDarkOne;
     font-size: 18px;
-    border: 1px solid $colorDarkOne;
+
     line-height: 26px; 
         padding: 12px 40px 12px 20px;
         position: relative;

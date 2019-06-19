@@ -1,11 +1,15 @@
 .c-banner {
-	margin-bottom:88px;
+	padding-bottom:88px;
+	position: fixed;
+	width: 100%;
+	background: #FFF;
+	top: 0;
 	&.-home {
 		background: #2f2f2f;
-		height: calc(100vh - 34px);
+		height: 100vh;
 		.c-header_background-hero {
 			background-size: cover !important;
-			height: calc(100vh - 34px);
+			height: 100vh;
 			position: relative;
 			.c-banner_content {
 				position: absolute;
@@ -21,7 +25,7 @@
     			}
 			}			
 			.o-wrapper {
-				height: calc(100vh - 34px);
+				height: 100vh;
 				position: relative;
 				width: 100%;
 			}
@@ -37,4 +41,17 @@
 			position: relative;
 		}
 	}		
+}
+
+
+	main {
+		margin-top: 616px;
+		position: relative;
+		background: #FFF;
+		padding-top: 88px;
+	}
+.pageslug-home {
+	main {
+		margin-top: 100vh;
+	}
 }

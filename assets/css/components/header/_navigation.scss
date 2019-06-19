@@ -1,5 +1,63 @@
+
+
+@-webkit-keyframes slideOutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .c-header_navigation_secondary {
 	background-color: $colorDarkOne;
+		position: fixed;
+		top:0;
+		width: 100%;
+		z-index: 2;
 	.c-navigation_secondary {
 		text-align: right;
 		ul {
@@ -22,13 +80,44 @@
 			}		
 		}
 	}
+	&.headroom--not-top {
+
+		top: -100%;
+		transition: top 0s 0.3s linear;
+&.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
 }
+}
+
+	&.headroom--top {
+
+		&.slideInDown {
+  			-webkit-animation-name: slideInDown;
+  			animation-name: slideInDown;
+		}
+	}
+}
+
 
 .c-header_navigation_primary {
 	margin-bottom: 120px;
-	position: absolute;
+	position: fixed;
+	top: 38px;
+	transition: all 0.2s linear;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
+
+	&.headroom--top {
+		top: 38px;
+background: rgba(42,42,42,.0)
+}	
+	&.headroom--not-top {
+
+		top: 0;
+		transition: top 0.25s  linear,background 0.4s linear;
+		background: rgba(42,42,42,.8);
+	}
 	.c-header_flex {
 		display: flex;
 		transition: all 0.15s linear;	
@@ -39,7 +128,7 @@
 		}		
 		.c-header_logo {
 			margin-right: auto;
-			padding: 24px 0;
+			padding: 12px 0;
 			img {
 				max-width: 320px;
 			}
@@ -173,3 +262,11 @@
 		}
 	}
 }
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+

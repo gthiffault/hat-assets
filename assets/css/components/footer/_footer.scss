@@ -1,6 +1,8 @@
 footer {
 	background: $bgTwo;
 	padding: 24px 0;
+	position: relative;
+	z-index: 2;
 	.c-footer_copyright {
 		font-size: 16px;
 		line-height: 24px;

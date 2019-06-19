@@ -90,3 +90,204 @@ $('#form').submit(function(ev) {
         }
     });
 });
+
+
+
+
+(function() {
+    var secondary = new Headroom(document.querySelector(".c-header_navigation_secondary"), {
+        tolerance: 5,
+        offset : document.getElementById('page').offsetHeight,
+        classes: {
+          initial: "animated",
+          pinned: "slideInDown",
+          unpinned: "slideOutUp"
+        }
+    });
+    secondary.init();
+    var main = new Headroom(document.querySelector(".c-header_navigation_primary"), {
+        tolerance: 5,
+        offset : document.getElementById('page').offsetHeight,
+        classes: {
+          initial: "animated",
+          pinned: "slideInDown",
+          unpinned: "slideOutUp"
+        }
+    });
+    main.init();
+
+            var controllerFive = new ScrollMagic.Controller();
+        if($('.c-quote').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 0.9,
+                triggerElement: '.c-quote',
+                duration: $('.c-quote').height()
+            })
+  .setTween('.c-quote_wrap', {opacity:1,marginTop:0, ease: Linear.easeNone})
+  .addTo(controllerFive);
+        }     
+
+
+
+
+        var controller = new ScrollMagic.Controller();
+        if($('.c-content-icon').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 0.2,
+                triggerElement: '#contact',
+                duration: $('#contact').height() + 144
+            })
+            .setTween(TweenMax.to('.c-content-icon', 1, {y: $('#contact').height()/2,opacity:0, ease: Linear.easeNone}))
+            .addTo(controller);
+        }
+
+
+
+        var controllerOne = new ScrollMagic.Controller();
+        if($('.o-wrapper.-two.-a .c-content').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 1,
+                triggerElement: '.o-wrapper.-two.-a',
+                duration: $('.o-wrapper.-two.-a').height()
+            })
+            .setTween(TweenMax.to('.o-wrapper.-two.-a .c-content', 1, {y: '-50%', ease: Linear.easeNone}))
+            .addTo(controllerOne);
+        }
+
+        var controllerOne = new ScrollMagic.Controller();
+        if($('.o-wrapper.-two.-a .c-content').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 0.5,
+                triggerElement: '.o-wrapper.-two.-a',
+                duration: $('.o-wrapper.-two.-a').height()
+            })
+            .setTween(TweenMax.to('.o-wrapper.-two.-a .c-content', 1, {y: '-100%', ease: Linear.easeNone}))
+            .addTo(controllerOne);
+        }        
+
+        var controllerOne = new ScrollMagic.Controller();
+        if($('.o-wrapper.-two.-b .c-content').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 1,
+                triggerElement: '.o-wrapper.-two.-b',
+                duration: $('.o-wrapper.-two.-b').height()
+            })
+            .setTween(TweenMax.to('.o-wrapper.-two.-b .c-content', 1, {y: '-50%', ease: Linear.easeNone}))
+            .addTo(controllerOne);
+        }
+
+        var controllerTwo = new ScrollMagic.Controller();
+        if($('.o-wrapper.-two.-b .c-content').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 0.5,
+                triggerElement: '.o-wrapper.-two.-b',
+                duration: $('.o-wrapper.-two.-b').height() + 110
+            })
+            .setTween(TweenMax.to('.o-wrapper.-two.-b .c-content', 1, {y: '-70%', ease: Linear.easeNone}))
+            .addTo(controllerTwo);
+        }                
+
+
+            var controllerThree = new ScrollMagic.Controller();
+        if($('.o-wrapper.-two.-a .c-content').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 0,
+                triggerElement: '.-version-zero',
+                duration: $('.-version-zero').height()
+            })
+  .setTween('.c-txt-image.-version-zero .o-ratio--home-image.-first', {y: "15%", ease: Linear.easeNone})
+  .addTo(controllerThree);
+        }     
+
+            var controllerFour = new ScrollMagic.Controller();
+        if($('.o-wrapper.-two.-b .c-content').length) {
+            new ScrollMagic.Scene({
+                triggerHook: 0,
+                triggerElement: '.c-image-txt.-version-zero',
+                duration: $('.c-image-txt.-version-zero').height()
+            })
+  .setTween('.c-image-txt.-version-zero .o-ratio--home-image.-second', {y: "15%", ease: Linear.easeNone})
+  .addTo(controllerFour);
+        }     
+
+        
+
+        var scrollMagicController = new ScrollMagic.Controller();
+
+$('.c-btn_div .-first').each(function() {
+  var currentElem = this;
+
+  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+    y: '100%',
+  });
+  var scene = new ScrollMagic.Scene({
+      triggerElement: currentElem,
+      triggerHook: 'onEnter',
+      offset: 100,
+      duration: currentElem,
+      ease: Power0.easeInOut
+    })
+    .setTween(tweenButton)
+    .addTo(scrollMagicController);
+});
+
+
+$('.c-btn_div .-second').each(function() {
+  var currentElem = this;
+
+  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+    x: '-100%'
+  });
+  var scene = new ScrollMagic.Scene({
+      triggerElement: currentElem,
+      triggerHook: 'onEnter',
+      offset: 100,
+      duration: currentElem,
+      ease: Power0.easeInOut
+    })
+    .setTween(tweenButton)
+    .addTo(scrollMagicController);
+});
+
+
+$('.c-btn_div .-third').each(function() {
+  var currentElem = this;
+
+  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+    y: '-100%'
+  });
+  var scene = new ScrollMagic.Scene({
+      triggerElement: currentElem,
+      triggerHook: 'onEnter',
+      offset: 100,
+      duration: currentElem,
+      ease: Power0.easeInOut
+    })
+    .setTween(tweenButton)
+    .addTo(scrollMagicController);
+});
+
+$('.c-btn_div .-four').each(function() {
+  var currentElem = this;
+
+  var tweenButton = new TimelineMax().from(currentElem, 0.1, {
+    x: '100%'
+  });
+  var scene = new ScrollMagic.Scene({
+      triggerElement: currentElem,
+      triggerHook: 'onEnter',
+      offset: 100,
+      duration: currentElem,
+      ease: Power0.easeInOut
+    })
+    .setTween(tweenButton)
+    .addTo(scrollMagicController);
+});
+
+}());
+
+
+
+
+
+        
