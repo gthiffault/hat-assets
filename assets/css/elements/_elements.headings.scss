@@ -35,12 +35,14 @@ h2 {
     line-height: 44px;
 }
 .c-header_banner h2 {
+    .c-title_text {
+        opacity: 0;
     color: #FFF;
     font-family: $fontSecond;
     font-size: 72px;
     font-weight: 400;
+    }
     left: 50%;
-    position: absolute;
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
