@@ -446,13 +446,10 @@ if($('c-testimonials_form').length) {
 
 var logo = new Vivus('load', {
   type: 'async',
-  duration: 100,
+  duration: 75,
   animTimingFunction: Vivus.EASE,
   start: 'autostart'
 });
-
-
-
             TweenLite.to($('#Artboard'), 0.0, {
               ease: Sine.easeOut, 
               stroke:'#FFF'
@@ -502,7 +499,7 @@ var logo = new Vivus('load', {
               marginBottom:0,
               zIndex:9999,
               ease: Sine.easeOut, 
-              delay: 0.4, 
+              delay: 0.2, 
             }); 
 
 
@@ -511,27 +508,25 @@ var logo = new Vivus('load', {
               marginTop:0,
               zIndex:9999,
               ease: Sine.easeOut, 
-              delay: 0.4, 
+              delay: 0.2, 
             });               
             TweenLite.to($('.c-title_text'), 0.5, {
               opacity:1,
               zIndex:9999,
               ease: Sine.easeOut, 
-              delay: 0.6, 
+              delay: 0.4, 
             });  
 
             TweenLite.to($('.c-page_transition'), 0.5, {
               top: '-100vh',
               ease: Sine.easeOut, 
-              delay:0.4
             });
 
 
-            TweenLite.to($('.c-image_transition'), 0.3, {
+            TweenLite.to($('.c-image_transition'), 0.5, {
               ease: Sine.easeOut, 
               opacity:0,
               marginTop:'-120px',
-              delay:0.4
             });
 
 
