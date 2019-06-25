@@ -208,7 +208,7 @@ $('#form').submit(function(ev) {
 (function() {
     var secondary = new Headroom(document.querySelector(".c-header_navigation_secondary"), {
         tolerance: 5,
-        offset : document.getElementById('page').offsetHeight,
+        offset : document.getElementById('page').offsetHeight - 86,
         classes: {
           initial: "animated",
           pinned: "slideInDown",
@@ -218,7 +218,7 @@ $('#form').submit(function(ev) {
     secondary.init();
     var main = new Headroom(document.querySelector(".c-header_navigation_primary"), {
         tolerance: 5,
-        offset : document.getElementById('page').offsetHeight,
+        offset : document.getElementById('page').offsetHeight - 86,
         classes: {
           initial: "animated",
           pinned: "slideInDown",
@@ -511,13 +511,14 @@ if($('c-testimonials_form').length) {
             TweenLite.to($('.c-image_transition'), 0.0, {
               ease: Sine.easeOut, 
               marginTop:'-120px',
-              opacity:1
+              opacity:1,
+              zIndex:23456
             });
 
             TweenLite.to($('.c-image_transition'), 0.5, {
               ease: Sine.easeOut, 
               opacity:1,
-              marginTop:0,
+              marginTop:0,              
             });
 
 var logo = new Vivus('load', {
@@ -599,12 +600,10 @@ var logo = new Vivus('load', {
             });
 
 
-            TweenLite.to($('.c-image_transition'), 0.5, {
+            TweenLite.to($('.c-image_transition'), 0.25, {
               ease: Sine.easeOut, 
               opacity:0,
               marginTop:'-120px',
+               zIndex: '-1'  
             });
-
-
-
       })  
