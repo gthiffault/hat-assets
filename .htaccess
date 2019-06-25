@@ -173,3 +173,21 @@ Header set Cache-Control "max-age=2592000, public"
 <FilesMatch "\.(html|htm)$">
     Header add Cache-Control "no-cache"
 </FilesMatch>
+
+<IfModule mod_headers.c>
+Header set Content-Security-Policy: "script-src 'self' data: 'unsafe-inline' 'unsafeeval' speakerdeck.com nicolas-hoizey.disqus.com a.disquscdn.com www.google-analytics.com
+platform.twitter.com syndication.twitter.com cdn.syndication.twimg.com cdn.jsdelivr.net
+assets.codepen.io; object-src 'self' vimeo.com; connect-src
+https://links.services.disqus.com wss://realtime.services.disqus.com *.algolia.net
+*.algolianet.com; report-uri https://nhocom.report-uri.io/r/default/csp/enforce"
+# `mod_headers` cannot match based on the content-type, however,
+# the `Content-Security-Policy` response header should be send
+# only for HTML documents and not for the other resources.
+<FilesMatch "\.
+(appcache|atom|bbaw|bmp|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?
+g|js|json(ld)?
+|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?
+|swf|topojson|tt[cf]|txt|vcard|vcf|vtt|webapp|web[mp]|webmanifest|woff2?|xloc|xml|xpi)$">
+Header unset Content-Security-Policy
+</FilesMatch>
+</IfModule>
