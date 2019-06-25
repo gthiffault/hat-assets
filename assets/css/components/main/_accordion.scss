@@ -15,7 +15,7 @@
 	}
 	ul {
 		margin: 0;
-		li {
+		li {			
 			list-style-type: none;
 			.c-accordion_content_wrap {
 				display: none;
@@ -68,6 +68,12 @@
 				margin-bottom: 0;
 				.c-accordion_content {
 					padding-bottom: 1px;
+				}
+			}
+			ul {
+				li {
+    list-style: disc;
+    list-style-position: inside;					
 				}
 			}			
 		}
