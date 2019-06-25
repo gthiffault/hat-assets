@@ -37,7 +37,7 @@
 		    left: 0;
 		    width: 100vw;
 		    height: calc(100vh - 38px);
-		    z-index: 1;
+		    z-index: -1;
 		    overflow: hidden;
 		    display: -webkit-box;
 		    display: -ms-flexbox;
@@ -55,7 +55,7 @@
 			    -ms-transform: translate(-50%, -50%);
 			    transform: translate(-50%, -50%);
 			    opacity: 1;
-			    z-index: 2;
+			    z-index: 1;
 			}
 						.o-wrapper {
 				height: 100vh;
@@ -64,16 +64,18 @@
 			}
 .c-banner_content {
 				position: absolute;
+				text-shadow: 4px 4px 12px rgba(26,26,26,0.7);
 				width: 100%;
     			left: 50%;
     			margin-left: 24px;
-    			z-index: 3;
+    			z-index: 2;
     			top: 50%;
     			transform: translate(-50%,-50%);
     			.c-page-subtitle {
     				color: $colorPaleOne;
     				font-family: $fontSecond;
     				font-size: 56px;
+    				text-shadow: 4px 4px 12px rgba(26,26,26,0.7);
     			}
 			}						
 		}
