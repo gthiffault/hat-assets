@@ -70,7 +70,8 @@ h2 {
 .pageslug-resources {
     @include title(111px,142px,-153px,-235px,-153px,-109px);
 }
-.pageslug-testimonials {
+.pageslug-testimonials,
+.pageslug-testimonialsList {
     @include title(92px,127px,0,-495px,0,-387px);
 }
 

@@ -37,7 +37,7 @@
     //TESTIMONIALS - COMMENTS
 //****************************************************************************//
 
-if($('body').hasClass('pageslug-testimonialsList')) {
+if($('.barba-container').hasClass('pageslug-testimonialsList')) {
 
 
 
@@ -72,6 +72,7 @@ if($('body').hasClass('pageslug-testimonialsList')) {
     setTimeout(function() {
         var x;
         if(array.length > 4) {
+
             $('.c-comments_view').show();
         }
         for (x = 0; x < array.length; x++) {
@@ -324,7 +325,7 @@ $('#form').submit(function(ev) {
 
 
 $("#c-testimonials_image").stick_in_parent({
-    offset_top:124,
+    offset_top:174,
     sticky_class:"c-element-fixed"
 });
 

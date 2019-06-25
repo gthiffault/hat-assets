@@ -25,6 +25,10 @@
 			padding-left: 24px;		
 			.c-content {
 				position: relative;
+				p {
+					position: relative;
+					z-index: 1;					
+				}
 			&:before {
 				position: absolute;
 				content: "";
@@ -34,7 +38,7 @@
 				left: -56px;
 				top: -32px;
 				background-position: -222px 0;
-				z-index: -1;
+				z-index: 0;
 			}
 			&:after {
 				position: absolute;
@@ -45,7 +49,7 @@
 				right: 0px;
 				bottom: -32px;
 				background-position: -372px 0;
-				z-index: -1;
+				z-index: 0;
 			}	
 			}
 			h4 {
