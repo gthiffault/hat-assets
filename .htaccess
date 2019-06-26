@@ -155,7 +155,7 @@ Header set Cache-Control "max-age=2592000, public"
 </IfModule>
 
 # 30 DAYS
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|mp4|iframe)$">
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|mp4|iframe|m4s)$">
     Header add Cache-Control "max-age=2592000, public"
 </FilesMatch>
 
