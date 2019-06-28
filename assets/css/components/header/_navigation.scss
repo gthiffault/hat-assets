@@ -163,7 +163,7 @@ background: rgba(42,42,42,.0)
 	height: 178px;
 	padding: 32px 0;
 	position: fixed;
-	right: 0;
+	right: -54px;
 	top: 320px;
 	width: 54px;
 	z-index: 4;
@@ -185,9 +185,12 @@ background: rgba(42,42,42,.0)
 				a {
 					background-position: -194px -68px;
 					height: 22px;
+					position: relative;
+					text-indent: 0;
 					&:hover {
 						cursor: pointer;
 					}
+
 				}
 			}				
 			&.-facebook {
@@ -200,8 +203,11 @@ background: rgba(42,42,42,.0)
 					background-position: -130px -68px;
 					width: 22px;
 				}
-			}						
+			}	
+
 		}
+	
+
 	}
 	.c-emergency_info {
 		background: $colorDarkOne;
@@ -263,6 +269,26 @@ background: rgba(42,42,42,.0)
 			}			
 		}
 	}
+					.c-emergency_label {
+					    position: absolute;
+					    content: 'Urgence immmédiate';
+					    bottom: 13px;
+					    background: #ffdc12;
+					    /* border: 2px solid #979797; */
+					    /* border-radius: 6px; */
+					    color: #1a1a1a;	
+					    font-size: 16px;
+					    line-height: 20px;
+					    z-index: 0;		
+					    padding: 4px 12px 8px 8px;
+					    text-align: right;
+						opacity: 0;
+						right: -98px;
+						transition: right 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+					}	
+
+
+
 }
 
 .animated {
@@ -271,4 +297,8 @@ background: rgba(42,42,42,.0)
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
+					.-js-emergency {
+						.c-emergency_label {
+right: 54px !important;
+						}
+					}

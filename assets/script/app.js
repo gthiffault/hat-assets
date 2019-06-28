@@ -456,6 +456,10 @@ if($('c-testimonials_form').length) {
 }
 
 
+$('.c-sidebar_item.-emergency a').hover(function() {
+  $('body').toggleClass('-js-emergency');
+})
+
           
         },
 
@@ -607,4 +611,26 @@ var logo = new Vivus('load', {
               marginTop:'-120px',
                zIndex: '-1'  
             });
+
+            TweenLite.to($('.c-sidebar'), 0.3, {
+              right: 0,
+              ease: Sine.easeOut, 
+              delay:0.75
+            });
+            TweenLite.to($('.c-emergency_label'), 0.3, {
+              right: 54,
+              opacity:1,
+              ease: Sine.easeOut, 
+              delay:0.8
+            });  
+
+            TweenLite.to($('.c-emergency_label'), 0.3, {
+              right: -42,
+              opacity:1,
+              ease: Sine.easeOut, 
+              delay:5
+            });                        
+
+
+
       })  
