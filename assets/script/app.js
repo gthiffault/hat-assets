@@ -617,12 +617,12 @@ var logo = new Vivus('load', {
               ease: Sine.easeOut, 
               delay:0.75
             });
-            TweenLite.to($('.c-emergency_label'), 0.5, {
+            TweenLite.to($('.c-emergency_label'), 0.3, {
               right: 54,
               opacity:1,
               
-                            ease: Power4.easeOut, 
-              delay:0.8
+                            ease: Sine.easeOut, 
+              delay:0.75
             });  
 
             TweenLite.to($('.c-emergency_label'), 0.3, {
