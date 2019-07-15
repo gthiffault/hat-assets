@@ -177,6 +177,11 @@ $('.c-comments_toggle').on('click', function() {
     $(this).toggleClass('-js-visibles-comments');
 })
 
+$('.c-share_toggle').on('click', function() {
+    $('.c-share_options').slideToggle(400);
+    $(this).toggleClass('-js-visibles-share');
+})
+
 
 $('.-emergency a').on('click', function() {
     $('.c-emergency_info').toggleClass('js-active');

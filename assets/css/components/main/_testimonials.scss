@@ -1,6 +1,6 @@
 .pageslug-testimonialsList {
 	.c-testimonials_single {
-		margin-bottom: 114px;
+		padding-bottom: 114px;
 		.c-testimonials_comments {
 			background: $colorPaleOne;
 			padding: 8px 72px 40px;
@@ -132,10 +132,11 @@
 						margin-top: 2px;
 						position: absolute;
 						right: 0;
-						transform-origin: 8px 13px;		
+						transform-origin: 8px 8px;		
 						transform: rotateX(0deg);		
 						transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 						width: 17px;
+						top:0;
 					}			
 					&:before {
 						background: url('../img/icons/humain-avant-tout_sprite.svg');
@@ -161,14 +162,36 @@
 							background-position: -881px 0;
 						}
 					}
-					&.-js-visibles-comments {
+					&.-js-visibles-comments,
+					&.-js-visibles-share {
 						&:after {
-							transform: rotateX(-180deg);
-							margin-top: -7px;
+							transform: rotateZ(180deg);
+							top:0;
 						}	
-					}					
+					}	
+					.c-share_options_ul {
+						li {
+							border-bottom: none;
+							padding: 0;
+							margin-top: 24px;
+							&:before,
+							&:after {
+								display: none;
+							}
+							&.c-share_facebook {
+							a {
+							background: url(../img/icons/humain-avant-tout_sprite.svg);
+							width: 10px;
+							height: 23px;
+							background-position: -104px -67px;
+							display: block;
+							text-indent: -999999px;
+							}
+							}
+						}
+					}				
 				}
-			}
+			}	
 		}
 		.o-layout__item {
 			width: 50%;
@@ -183,7 +206,20 @@
 	}	
 }
 
-
+.c-pagination {
+	&_ul {
+		li {
+			list-style-type: none;	
+			display: inline-block;
+			margin: 0 6px;
+			a,span {
+				font-size: 20px;
+				text-decoration: none;
+			}
+		}
+		
+	}
+}
 
 
 

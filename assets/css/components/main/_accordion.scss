@@ -13,6 +13,13 @@
 			}
 		}
 	}
+	&.-media {
+		ul {
+			li {
+				list-style-type: none;
+			}
+		}		
+	}
 	ul {
 		margin: 0;
 		li {			
