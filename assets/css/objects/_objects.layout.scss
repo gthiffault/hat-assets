@@ -325,8 +325,3 @@ $inuit-use-markup-fix: false !default;
 }
 
 
-.o-layout--equal-height {
-    display: block; /* [1] */
-    display: flex;
-    flex-wrap: wrap;
-}
