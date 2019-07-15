@@ -385,6 +385,10 @@ if($('c-testimonials_form').length) {
 }
 
 
+ $(function() {
+        $('.lazy').Lazy();
+    });
+
 $('.c-sidebar_item.-emergency a').hover(function() {
   $('body').toggleClass('-js-emergency');
 })

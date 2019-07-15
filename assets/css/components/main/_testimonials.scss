@@ -207,7 +207,20 @@
 }
 
 .c-pagination {
+	&.-single {
+		margin-top: 12px;
+		&_ul {
+			margin-left: 0;
+			li {		
+				a {
+				text-indent: 0;
+				}
+	
+			}
+		}
+	}	
 	&_ul {
+		margin-left: 0;
 		li {
 			list-style-type: none;	
 			display: inline-block;
@@ -215,8 +228,43 @@
 			a,span {
 				font-size: 20px;
 				text-decoration: none;
+				text-indent: -999999px;
+				position: relative;
+				&.c-pagination_previous:before,
+				&.c-pagination_next:after {
+							background: url(../img/icons/humain-avant-tout_sprite.svg);
+							width: 16px;
+							height: 16px;
+							background-position: -922px 0;
+							display: block;
+							position: absolute;
+							content: "";
+top: 6px;
+				}
+				&.c-pagination_previous {
+					padding-left: 24px;
+				}
+				&.c-pagination_previous:before {
+					transform: rotate(90deg);
+					left:0;
+				}
+				&.c-pagination_next {
+					padding-right: 24px;
+				}				
+				&.c-pagination_next:after {
+					transform: rotate(-90deg);
+					right: 0;
+
+				}				
 			}
+			span {
+				color: $colorDarkTwo;
+			}
+							&.-next	 {
+					float: right;
+				}	
 		}
+
 		
 	}
 }
