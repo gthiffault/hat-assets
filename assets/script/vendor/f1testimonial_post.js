@@ -441,14 +441,16 @@ $('.c-sidebar_item.-emergency a').hover(function() {
             },
 
             fadeOut: function() {
-
+            TweenLite.to($('.c-page_transition'), 0.0, {
+              top: '100vh',
+            });
             TweenLite.to($('.c-page_transition'), 0.5, {
               top: '0',
               ease: Sine.easeOut, 
             });
             TweenLite.to($('.c-image_transition'), 0.0, {
               ease: Sine.easeOut, 
-              marginTop:'-120px',
+              marginTop:'120px',
               opacity:1,
               zIndex:23456
             });
