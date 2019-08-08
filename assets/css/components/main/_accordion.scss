@@ -1,5 +1,13 @@
 .c-accordion {
-	padding: 88px 0;
+	@media (min-width: 320px) {
+		padding:64px 0;
+	}	
+	@media (min-width: 840px) {
+		padding:72px 0;
+	}		
+	@media (min-width: 1024px) {
+		padding: 88px 0;
+	}
 	&.-faq,
 	&.-media,
 	&.-resources {
@@ -31,7 +39,12 @@
 					display: block;
 				}
 				.c-accordion_content {
-					padding-top: 32px;
+					@media (min-width: 320px) {
+						padding-top: 24px;
+					}
+					@media (min-width: 720px) {
+						padding-top: 32px;
+					}															
 					padding-bottom: 1px;
 					margin-bottom: -25px;
 				}
@@ -40,19 +53,44 @@
 			.c-accordion_title {
 				border-bottom: 2px solid $borderZero;
 				h3 {
-					margin: 32px 0;
-					padding-right: 40px;
-					position: relative;
-				    font-size: 24px;
+
+
     				line-height: 32px;
+    				line-height: 1.333em;					
+					margin: 32px 0;
+					margin: 1.333em 0;
+					padding-right: 56px;
+					padding-right: 2.333em;
+					position: relative;
+					@media (min-width: 320px) {
+						font-size: 18px;
+					}	
+					@media (min-width: 480px) {
+						font-size: 20px;
+					}	
+					@media (min-width: 600px) {
+						font-size: 22px;
+					}	
+					@media (min-width: 840px) {
+						font-size: 24px;
+					}	
 					&:after {
-						background: $sprite -801px 0;
-						content: '';
-						height: 23px;
+						@media (min-width: 320px) {
+							background: url("../img/icons/humain-avant-tout_sprite.svg") -800px -37px;
+							height: 18px;
+							right: 2px;
+							width: 18px;
+							top: 6px;			
+					    }								
+						@media (min-width: 600px) {
+							background: $sprite -801px 0;
+							height: 23px;
+							right: 16px;
+							width: 24px;	
+					    	top: 6px;				
+					    }		
+						content: '';											
 						position: absolute;
-						right: 16px;
-						width: 24px;
-					    top: 6px;
     					transform: rotate(90deg);
     					transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 					}

@@ -46,6 +46,8 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;    
     &:after,
     &:before,
     .c-title_top,
@@ -58,7 +60,8 @@ h2 {
     }
 }
 
-.pageslug-about {
+.pageslug-about,
+.pageslug-contribute {
     @include title(123px,137px,0,-248px,0,-109px);
 }
 .pageslug-contact {

@@ -1,5 +1,14 @@
 .c-content {
-	margin-bottom: 88px;
+	@media (min-width: 320px) {
+		margin-bottom:64px;
+	}	
+	@media (min-width: 840px) {
+		margin-bottom:72px;
+	}		
+	@media (min-width: 1024px) {
+		margin-bottom: 88px;
+	}		
+
 	&.-w-button {
 		margin-bottom: 98px;		
 		.c-content_text {

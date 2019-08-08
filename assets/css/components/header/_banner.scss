@@ -32,11 +32,17 @@
 		}
 		.c-header_background-video {
 		    position: fixed;
-		    pointer-events: none;
-		    top: 38px;
+		    pointer-events: none;		  
 		    left: 0;
-		    width: 100vw;
-		    height: calc(100vh - 38px);
+		    width: 100vw;		  
+				@media (min-width: 320px) {
+					top: 0;
+					height: 100vh;
+				}		
+				@media (min-width: 1024px) {
+					top: 38px;
+					height: calc(100vh - 38px);
+				}			    
 		    z-index: -1;
 		    overflow: hidden;
 		    display: -webkit-box;
@@ -96,7 +102,15 @@
 		margin-top: 616px;
 		position: relative;
 		background: #FFF;
+	@media (min-width: 320px) {
+		padding-top:64px;
+	}	
+	@media (min-width: 840px) {
+		padding-top:72px;
+	}		
+	@media (min-width: 1024px) {
 		padding-top: 88px;
+	}	
 	}
 .pageslug-home {
 	main {

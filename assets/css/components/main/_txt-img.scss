@@ -2,16 +2,42 @@
 	&.-version-zero {
 		@include grid();		
     	@media (min-width: 320px) {
-       		.c-content_wrap {
-        		grid-column-start: 1;
-        		grid-row-start: 1; 
+            grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
+       		.c-content {
+                width: 100% !important;
+                margin-top: 0 !important;
 	    	}
        		.c-image {
-        		grid-column-start: 1;
-        		grid-row-start: 2; 
+                    display: grid;
+                div {
+                    background-size: cover !important;
+                    height: 100% !important;
+                    width: 100%;
+                    &:before {
+                        display: none;
+                    }
+                }                
         	} 
         }
-    	@media (min-width: 840px) {
+        @media (min-width: 320px) {
+            .o-wrapper.-two.-a {
+                display: none;
+            }      
+            .-two.-c {
+                display: block;
+            }         
+        }
+    	@media (min-width: 1024px) {
+            .c-content {
+                width: calc(100% + 25%) !important;
+                margin-top: 0 !important;
+            }            
+            .o-wrapper.-two.-a {
+                display: block;
+            }
+            .-two.-c {
+                display: none;
+            }                
     		grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
        		.c-content_wrap {
                 background: $bgTwo;
@@ -25,6 +51,10 @@
                 overflow: hidden;
                 div {
                     background-size: cover !important;
+                    height: 100% !important;
+                    &:before {
+                        display: block;
+                    }                    
                 }
         	} 
         }
@@ -34,35 +64,131 @@
 	&.-version-zero {
 		@include grid();	
 		@media (min-width: 320px) {
-  			.c-content_wrap {
-    			grid-column-start: 1;
-    			grid-row-start: 1; 
-    		}
-  			.c-image {
-    			grid-column-start: 1;
-    			grid-row-start: 2; 
-    		} 
+            grid-template: repeat(2, [row] minmax(104px, 1fr))/repeat(1, [col] 1fr);
+            .c-content {
+                width: 100% !important;
+                margin-top: 0 !important;
+            }
+            .c-content_wrap {
+                background: $bgTwo;
+                grid-column-start: 1;
+                grid-row-start: 1; 
+            }
+            .c-image {
+                    display: grid;
+                                    grid-column-start: 1;
+                grid-row-start: 2;  
+                div {
+                    background-size: cover !important;
+                    height: 100% !important;
+                    width: 100%;
+                    &:before {
+                        display: none;
+                    }
+                }                
+            } 
     	}
-		@media (min-width: 840px) {
-			grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
-  			.c-content_wrap {
-    			grid-column-start: 2;
-    			grid-row-start: 1; 
-    		}
-  			.c-image {
-                 background: $bgThree;
-    			grid-column-start: 1;
-    			grid-row-start: 1; 
+        @media (min-width: 840px) {
+            grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
+            .c-content {
+                width: 100% !important;
+                margin-top: 0 !important;
+            }
+
+            .c-image {
+                    display: grid;
+
+                div {
+                    background-size: cover !important;
+                    height: 100% !important;
+                    width: 100%;
+                    &:before {
+                        display: none;
+                    }
+                }                
+            } 
+        }        
+        @media (min-width: 320px) {
+            background: #FFF;
+        }
+        @media (min-width: 320px) {
+            .o-wrapper.-two.-b {
+                display: none;
+            }      
+            .-two.-c {
+                display: block;
+            }         
+        }
+        @media (min-width: 1024px) {
+            .c-content {
+                width: calc(100% + 25%) !important;
+                margin-top: 0 !important;
+            }            
+            .o-wrapper.-two.-b {
+                display: block;
+            }
+            .-two.-c {
+                display: none;
+            }                
+            grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
+            .c-content_wrap {
+                background: $bgTwo;
+                grid-column-start: 2;
+                grid-row-start: 1; 
+            }
+            .c-image {
+                background: $bgTwo;
+                grid-column-start: 1;
+                grid-row-start: 1; 
                 overflow: hidden;
                 div {
                     background-size: cover !important;
-                }                
-    		} 
-    	}		
+                    height: 100% !important;
+                    &:before {
+                        display: block;
+                    }                    
+                }
+            } 
+        }	
 	}	
 }
 
 .c-side-by-side {
+    @media (min-width: 320px) {
+        &.-desktop {
+            display: none;
+        }
+        &.-mobile {
+            display: block;
+        }          
+    }
+    @media (min-width: 960px) {
+        &.-desktop {
+            display: block;
+        }
+        &.-mobile {
+            display: none;
+        }        
+    }    
+
+    &.-mobile {
+
+    @media (min-width: 320px) {
+        margin-bottom:64px;
+    }   
+    @media (min-width: 840px) {
+        margin-bottom:72px;
+    }  
+
+        .c-mg-btm {
+    @media (min-width: 320px) {
+        margin-bottom:40px;
+    }   
+    @media (min-width: 840px) {
+        margin-bottom:48px;
+    }       
+        }
+    }
 	margin-bottom: 112px;
     .c-side-right_content {
         margin-bottom: -24px;

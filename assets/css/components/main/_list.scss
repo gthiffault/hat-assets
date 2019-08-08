@@ -73,8 +73,11 @@
  	&.-home {
  		.c-list_ul {
  			margin-bottom: 24px;
+ 			text-align: center;
  			li {
  				margin-bottom: 40px;
+ 				max-width: 429px;
+ 				text-align: center;
  			}
  		}
  	}	

@@ -182,3 +182,38 @@ $inuit-widths-breakpoint-separator: \@ !default;
   }
 
 }
+
+/**
+ * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
+ * defined breakpoints, and give them a Responsive Suffix, e.g.:
+ *
+ * <div class="u-3/12@mobile">
+ */
+
+$mq-breakpoints: (
+portrait-small-handset:   320px,
+portrait-medium-handset:  400px,
+portrait-large-handset:   480px,
+portrait-small-tablet:    600px,
+portrait-medium-tablet:   720px,
+portrait-large-tablet:    840px,
+landscape-small-tablet:   960px,
+landscape-medium-tablet:  1024px,
+landscape-large-tablet:   1280px,
+window-large:             1440px,
+window-xlarge:            1920px
+);
+
+
+
+@if (variable-exists(mq-breakpoints)) {
+
+  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+    @include mq($from: $inuit-bp-name) {
+      @include inuit-widths($inuit-fractions, #{$inuit-widths-breakpoint-separator}#{$inuit-bp-name});
+    }
+
+  }
+
+}
