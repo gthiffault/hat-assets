@@ -10,8 +10,7 @@
 		.c-header_background-hero {
 			background-size: cover !important;
 			height: 100vh;
-			position: relative;
-			background-position: center !important;
+			position: relative;			
 			.c-banner_content {
 				position: absolute;
 				width: 100%;
@@ -94,6 +93,7 @@
 			background-size: cover !important;
 			height: 616px;
 			position: relative;
+			background-position: center !important;
 		}
 	}		
 }
