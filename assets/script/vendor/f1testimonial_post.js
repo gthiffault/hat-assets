@@ -91,8 +91,8 @@ alert('@34');
                 }
             }
         );
-    };
-    setTimeout(function() {
+
+setTimeout(function() {
         var x;
         if(array.length > 4) {
 
@@ -115,8 +115,11 @@ $('.c-comments_ul').append($('<li class="c-comments_li">').append('<small>' + da
 
     
         }
-    },1000);
+    },1500);
 
+        
+    };
+    
 });
 
 $('.c-comments_toggle').on('click', function() {
