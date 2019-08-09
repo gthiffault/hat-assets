@@ -427,6 +427,38 @@ if($(window).innerWidth() >= 1280 ) {
             }  
 })
 
+$('.no-barba').on('click', function() {
+     TweenLite.to($('.c-page_transition'), 0.0, {
+              top: '100vh',
+            });
+            TweenLite.to($('.c-page_transition'), 0.5, {
+              top: '0',
+              ease: Sine.easeOut, 
+            });
+            TweenLite.to($('.c-image_transition'), 0.0, {
+              ease: Sine.easeOut, 
+              marginTop:'120px',
+              opacity:1,
+              zIndex:23456
+            });
+
+            TweenLite.to($('.c-image_transition'), 0.5, {
+              ease: Sine.easeOut, 
+              opacity:1,
+              marginTop:0,              
+            });
+
+var logo = new Vivus('load', {
+  type: 'async',
+  duration: 75,
+  animTimingFunction: Vivus.EASE,
+  start: 'autostart'
+});
+            TweenLite.to($('#Artboard'), 0.0, {
+              ease: Sine.easeOut, 
+              stroke:'#FFF'
+});
+})
 
 
  $(function() {
@@ -436,6 +468,8 @@ if($(window).innerWidth() >= 1280 ) {
 $('.c-sidebar_item.-emergency a').hover(function() {
   $('body').toggleClass('-js-emergency');
 })
+
+
 
           
         },
