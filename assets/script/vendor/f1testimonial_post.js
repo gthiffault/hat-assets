@@ -623,7 +623,7 @@ var logo = new Vivus('load', {
             });  
 
             TweenLite.to($('.c-page_transition'), 0.5, {
-              top: '-100vh',
+              top: '-120vh',
               ease: Sine.easeOut, 
             });
 
