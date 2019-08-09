@@ -447,7 +447,10 @@ $('.no-barba').on('click', function() {
               opacity:1,
               marginTop:0,              
             });
-
+            TweenLite.to($('#Artboard'), 0.0, {
+              ease: Sine.easeOut, 
+              stroke:'#FFF'
+});
 
 })
 
@@ -530,12 +533,12 @@ $('.c-sidebar_item.-emergency a').hover(function() {
               marginTop:0,              
             });
 
-var logo = new Vivus('load', {
-  type: 'async',
-  duration: 75,
-  animTimingFunction: Vivus.EASE,
-  start: 'autostart'
-});
+// var logo = new Vivus('load', {
+//   type: 'async',
+//   duration: 75,
+//   animTimingFunction: Vivus.EASE,
+//   start: 'autostart'
+// });
             TweenLite.to($('#Artboard'), 0.0, {
               ease: Sine.easeOut, 
               stroke:'#FFF'
