@@ -76,7 +76,7 @@
             }
             .c-image {
                     display: grid;
-                                    grid-column-start: 1;
+                 grid-column-start: 1;
                 grid-row-start: 2;  
                 div {
                     background-size: cover !important;
@@ -94,10 +94,15 @@
                 width: 100% !important;
                 margin-top: 0 !important;
             }
-
+            .c-content_wrap {
+                background: $bgTwo;
+                grid-column-start: 2;
+                grid-row-start: 1; 
+            }
             .c-image {
                     display: grid;
-
+ grid-column-start: 1;
+                grid-row-start: 1;  
                 div {
                     background-size: cover !important;
                     height: 100% !important;
