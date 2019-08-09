@@ -46,7 +46,13 @@
 				background: url('../img/icons/humain-avant-tout_sprite.svg');
 				width: 134px;
 				height: 86px;
-				left: -56px;
+@media (min-width: 1024px) {
+	left: -32px;
+			}		
+@media (min-width: 1280px) {
+	left: -56px;
+			}					
+				
 				top: -32px;
 				background-position: -222px 0;
 				z-index: 0;

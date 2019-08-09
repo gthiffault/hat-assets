@@ -431,7 +431,7 @@ $('.no-barba').on('click', function() {
      TweenLite.to($('.c-page_transition'), 0.0, {
               top: '100vh',
             });
-            TweenLite.to($('.c-page_transition'), 0.5, {
+            TweenLite.to($('.c-page_transition'), 0.3, {
               top: '0',
               ease: Sine.easeOut, 
             });
@@ -442,7 +442,7 @@ $('.no-barba').on('click', function() {
               zIndex:23456
             });
 
-            TweenLite.to($('.c-image_transition'), 0.5, {
+            TweenLite.to($('.c-image_transition'), 0.3, {
               ease: Sine.easeOut, 
               opacity:1,
               marginTop:0,              
