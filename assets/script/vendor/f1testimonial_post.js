@@ -452,7 +452,7 @@ if($(window).innerWidth() >= 1280 ) {
 //               stroke:'#FFF'
 // });
 
-})
+// })
 
 
  $(function() {
