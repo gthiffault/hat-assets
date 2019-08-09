@@ -149,7 +149,13 @@ top: 0;
 			margin-right: auto;
 			padding: 20px 0;
 			img {
-				max-width: 320px;
+@media (min-width: 320px) {
+	max-width: 64px;
+}
+@media (min-width: 1024px) {
+	max-width: 320px;
+}				
+				
 			}
 		}
 		.c-navigation_primary {

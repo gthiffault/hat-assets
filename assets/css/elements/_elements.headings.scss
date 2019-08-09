@@ -39,7 +39,17 @@ h2 {
         opacity: 0;
     color: #FFF;
     font-family: $fontSecond;
-    font-size: 72px;
+padding: 0 20px;
+@media (min-width: 320px) {
+        font-size: 56px;
+}
+@media (min-width: 720px) {
+        font-size: 64px;
+}
+@media (min-width: 1024px) {
+        font-size: 72px;
+}
+
     font-weight: 400;
     }
     left: 50%;
@@ -86,6 +96,9 @@ h2 {
     letter-spacing: 2px;
     line-height: 64px;
     max-width: 720px;
+
+
+
     position: static;
     stop-color: #FFF;
     text-align: left;
