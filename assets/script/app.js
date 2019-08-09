@@ -155,7 +155,7 @@ $(document).ready(function() {
         FB.api(
             postID,
             'GET',
-            {access_token:'EAAHWLrDxevoBAMLzTMemGKCjewhSHtZCjanj9CF2NvpvHnkYXHHF7oUAhHcdBa2ypZA10MieEI8g78V1HuThmMb9kqE8LxkpZBZCc8RJbNvKyz6v8GBa67TIey1cdEklYtfs1UDQgYWTBROF41MReK4FZCHwscsUvaSw4cyLE0aajZAx4es5F8XJq1ycCV3CUJtd8YMR5qMEdQRIMng8cxv0wK5LPwjpud51Tz7gwHjQZDZD',
+            {access_token:'EAAHWLrDxevoBAGiYmSSJwef7U6uhICkMQPmCi3L0ZAVySwVJS0bhqspuQArqQqklQq0OsLGhyu4exvrsRM06RVw1zZC48zAP5C3K9hrIZBDe3ePL8IZAR9Tvl9nbCX4hjP1ypzQGcKinPIvXCG50IflZBUHDNSt1gCtZBuIMgfDW5x5UHNq22oEuZB3gX40Iv01bxvKU1xcn10X1A5tFzkHnZCWCyt5dinIUM6TxQa7KQgZDZD',
             fields:"comments.limit(10000){message,attachment,created_time}"},
             function (response) {
                 if (response && !response.error) {
