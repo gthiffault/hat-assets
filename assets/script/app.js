@@ -525,16 +525,7 @@ $('.no-barba').on('click', function() {
               marginTop:0,              
             });
 
-var logo = new Vivus('load', {
-  type: 'async',
-  duration: 75,
-  animTimingFunction: Vivus.EASE,
-  start: 'autostart'
-});
-            TweenLite.to($('#Artboard'), 0.0, {
-              ease: Sine.easeOut, 
-              stroke:'#FFF'
-});
+
 })
 
 
