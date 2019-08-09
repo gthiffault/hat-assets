@@ -1,7 +1,47 @@
 .c-testimonials_form {
 	background: $bgThree;
 	margin-top: -32px;
-	padding: 40px 72px;
+@media (min-width: 320px) {
+	padding: 56px 20px;
+	left: -20px;
+	width: calc(100% + 40px);
+	position: relative;
+}
+@media (min-width: 375px) {
+	padding: 56px 24px;	
+	left: -24px;
+	width: calc(100% + 48px);
+}
+@media (min-width: 400px) {
+	padding: 56px 28px;	
+	left: -28px;
+	width: calc(100% + 56px);
+}
+@media (min-width: 480px) {
+	padding: 56px 32px;
+	width: 100%;
+	left:0;
+}	
+@media (min-width: 600px) {
+	padding: 56px 36px;
+}			
+
+@media (min-width: 720px) {
+	padding: 56px 40px;
+}			
+@media (min-width: 840px) {
+	padding: 56px 44px;
+}			
+@media (min-width: 960px) {
+	padding: 56px 48px;
+}			
+@media (min-width: 1024px) {
+	padding: 56px 52px;
+}					
+@media (min-width: 1280px) {
+		padding: 56px 56px;
+}			
+	
 	.c-form_btn {
 		text-align: right;
 	}

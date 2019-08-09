@@ -3,7 +3,47 @@
 		padding-bottom: 114px;
 		.c-testimonials_comments {
 			background: $colorPaleOne;
-			padding: 8px 72px 40px;
+@media (min-width: 320px) {
+	padding: 56px 20px;
+	left: -20px;
+	width: calc(100% + 40px);
+	position: relative;
+}
+@media (min-width: 375px) {
+	padding: 56px 24px;	
+	left: -24px;
+	width: calc(100% + 48px);
+}
+@media (min-width: 400px) {
+	padding: 56px 28px;	
+	left: -28px;
+	width: calc(100% + 56px);
+}
+@media (min-width: 480px) {
+	padding: 56px 32px;
+	width: 100%;
+	left:0;
+}	
+@media (min-width: 600px) {
+	padding: 56px 36px;
+}			
+
+@media (min-width: 720px) {
+	padding: 56px 40px;
+}			
+@media (min-width: 840px) {
+	padding: 56px 44px;
+}			
+@media (min-width: 960px) {
+	padding: 56px 48px;
+}			
+@media (min-width: 1024px) {
+	padding: 56px 52px;
+}					
+@media (min-width: 1280px) {
+		padding: 56px 56px;
+}			
+	
 			.c-comments {
 				display: none;
 				.c-comments_ul {
@@ -126,7 +166,46 @@
 		}
 		.c-testimonials_interaction {
 			background: $bgZero;
-			padding: 56px 64px;
+@media (min-width: 320px) {
+	padding: 56px 20px;
+	left: -20px;
+	width: calc(100% + 40px);
+	position: relative;
+}
+@media (min-width: 375px) {
+	padding: 56px 24px;	
+	left: -24px;
+	width: calc(100% + 48px);
+}
+@media (min-width: 400px) {
+	padding: 56px 28px;	
+	left: -28px;
+	width: calc(100% + 56px);
+}
+@media (min-width: 480px) {
+	padding: 56px 32px;
+	width: 100%;
+	left:0;
+}	
+@media (min-width: 600px) {
+	padding: 56px 36px;
+}			
+
+@media (min-width: 720px) {
+	padding: 56px 40px;
+}			
+@media (min-width: 840px) {
+	padding: 56px 44px;
+}			
+@media (min-width: 960px) {
+	padding: 56px 48px;
+}			
+@media (min-width: 1024px) {
+	padding: 56px 52px;
+}					
+@media (min-width: 1280px) {
+		padding: 56px 56px;
+}			
 			p {
 				font-size: 26px;
 				font-weight: 700;
@@ -137,7 +216,13 @@
 				margin: 0;
 				li {
 					display: block;
-					padding-left: 48px;
+@media (min-width: 320px) {
+padding-left: 32px;
+}
+@media (min-width: 720px) {
+	padding-left: 48px;
+}						
+					
 					position: relative;
 					&:after {
 						background: $sprite -922px 0;
@@ -165,7 +250,13 @@
 						margin-bottom: 16px;
 						padding-bottom: 16px;
 						&:before {
-							background-position: -841px 0;
+@media (min-width: 320px) {
+	background-position: -841px -29px;
+}
+@media (min-width: 720px) {
+	background-position: -841px 0;
+}							
+							
 						}
 					}											
 					&:hover {
@@ -174,6 +265,12 @@
 					&:last-child {
 						&:before {
 							background-position: -881px 0;
+@media (min-width: 320px) {
+							background-position: -881px -36px;
+}
+@media (min-width: 720px) {
+							background-position: -881px 0;
+}								
 						}
 					}
 					&.-js-visibles-comments,
