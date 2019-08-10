@@ -3,10 +3,9 @@
 		padding-bottom: 114px;
 		.c-testimonials_comments {
 			background: $colorPaleOne;
-
+padding-bottom: 48px;
 			.c-comments {
-				padding: 56px 20px;
-			}
+				&.-js-visibles-comments {
 @media (min-width: 320px) {
 
 	left: -20px;
@@ -46,7 +45,10 @@
 }					
 @media (min-width: 1280px) {
 		padding: 56px 56px;
-}			
+}	
+				}
+			}
+		
 	
 			.c-comments {
 				display: none;

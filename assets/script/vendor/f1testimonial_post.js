@@ -132,6 +132,7 @@ $('.c-comments_ul').append($('<li class="c-comments_li">').append('<small>' + da
 $('.c-comments_toggle').on('click', function() {
     $('.c-comments').slideToggle(400);
     $(this).toggleClass('-js-visibles-comments');
+    $('#cc-w-164').find('.c-comments').toggleClass('-js-visibles-comments');
 })
 
 $('.c-share_toggle').on('click', function() {
