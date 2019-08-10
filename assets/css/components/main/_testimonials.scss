@@ -3,8 +3,12 @@
 		padding-bottom: 114px;
 		.c-testimonials_comments {
 			background: $colorPaleOne;
+
+			.c-comments {
+				padding: 56px 20px;
+			}
 @media (min-width: 320px) {
-	padding: 56px 20px;
+
 	left: -20px;
 	width: calc(100% + 40px);
 	position: relative;
@@ -362,6 +366,22 @@ padding-left: 32px;
 .c-pagination {
 	&.-single {
 		margin-top: 12px;
+		&.-desktop {
+			@media (min-width: 320px) {
+				display: none;
+			}			
+			@media (min-width: 1024px) {
+				display: block;
+			}
+		}
+		&.-mobile {
+			@media (min-width: 320px) {
+				display: block;
+			}			
+			@media (min-width: 1024px) {
+				display: none;
+			}
+		}		
 		&_ul {
 			margin-left: 0;
 			li {		
