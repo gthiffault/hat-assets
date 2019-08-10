@@ -14,7 +14,7 @@
 		p {
 			display: inline-block;
 			font-family: "Sacramento", cursive;
-			font-size: 56px;
+
 			font-style: italic;
 			line-height: 64px;
 			line-height: 1.143em;
@@ -43,12 +43,16 @@
 	.c-quote_wrap_mobile {
 		opacity: 1;
 		margin-top: 0;
-	@media (min-width: 960px) {
-		p {font-size: 40px;}
-	}
+		@media (min-width: 960px) {
+			p {font-size: 40px;}
+		}
 
 
 	}
+.c-quote_wrap {
+			font-size: 56px;
+}
+
 	@media (min-width: 320px) {
 		.c-quote_wrap {
 			display: none;
