@@ -45,7 +45,12 @@
 		@media (min-width: 960px) {
 			p {font-size: 40px;}
 		}
-
+		@media (min-width: 600px) {
+			p {font-size: 40px;}
+		}
+		@media (min-width: 960px) {
+			p {font-size: 56px;}
+		}		
 
 	}
 .c-quote_wrap {
