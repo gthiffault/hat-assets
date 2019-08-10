@@ -1,33 +1,33 @@
 .c-txt-image {
 	&.-version-zero {
-		@include grid();		
+		
     	@media (min-width: 320px) {
-            grid-template: repeat(2, [row] minmax(104px, 1fr))/repeat(1, [col] 1fr);
+            display: block;
             .c-content {
                 width: 100% !important;
                 margin-top: 0 !important;
+                padding: 64px 20px 40px ;
+                background: #FFF;
+                margin-bottom: 0;
             }
             .c-content_wrap {
-                background: $bgTwo;
-                grid-column-start: 1;
-                grid-row-start: 1; 
+                background: #FFF;
+
                 display: block;
             }
             .c-image {
-                    display: grid;
+                    display: block;
                  grid-column-start: 1;
                 grid-row-start: 2;  
                 div {
                     background-size: cover !important;
                     height: 100% !important;
                     width: 100%;
-                    &:before {
-                        display: none;
-                    }
                 }                
             } 
         }
         @media (min-width: 840px) {
+            @include grid();        
             grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
             .c-content {
                 width: 100% !important;
@@ -98,20 +98,22 @@
 }
 .c-image-txt {
 	&.-version-zero {
-		@include grid();	
+		
 		@media (min-width: 320px) {
-            grid-template: repeat(2, [row] minmax(104px, 1fr))/repeat(1, [col] 1fr);
+            display: block;
             .c-content {
                 width: 100% !important;
                 margin-top: 0 !important;
+                padding: 64px 20px 40px;
+                margin-bottom: 0;
             }
             .c-content_wrap {
-                background: $bgTwo;
-                grid-column-start: 1;
-                grid-row-start: 1; 
+                background: #FFF;
+                position: relative;
+                z-index: 122;
             }
             .c-image {
-                    display: grid;
+                    display: block;
                  grid-column-start: 1;
                 grid-row-start: 2;  
                 div {
@@ -119,12 +121,12 @@
                     height: 100% !important;
                     width: 100%;
                     &:before {
-                        display: none;
                     }
                 }                
             } 
     	}
         @media (min-width: 840px) {
+            @include grid();    
             grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
             .c-content {
                 width: 100% !important;

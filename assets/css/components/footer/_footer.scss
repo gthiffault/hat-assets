@@ -10,4 +10,22 @@ footer {
 	picture {
 		margin-right: 24px;
 	}
+@media (min-width: 320px) {
+.c-footer_pipe {
+	display: none;
 }
+.c-footer_br {
+	display: block;
+}
+}
+@media (min-width: 480px) {
+.c-footer_pipe {
+	display: inline-block;
+}
+.c-footer_br {
+	display: none;
+}
+}
+}
+
+
