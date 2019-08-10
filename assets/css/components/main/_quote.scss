@@ -43,6 +43,11 @@
 	.c-quote_wrap_mobile {
 		opacity: 1;
 		margin-top: 0;
+	@media (min-width: 960px) {
+		font-size: 40px;;
+	}
+
+		
 	}
 	@media (min-width: 320px) {
 		.c-quote_wrap {
@@ -53,9 +58,7 @@
 		}		
 	}
 
-	@media (min-width: 960px) {
-		font-size: 40px;;
-	}
+
 	@media (min-width: 1024px) {
 		.c-quote_wrap {
 			display: block;
