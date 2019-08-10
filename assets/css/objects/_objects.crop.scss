@@ -31,7 +31,7 @@ $inuit-crops: (
  * 1. Set up a positioning context in which the image can sit.
  * 2. This is the crucial part: where the cropping happens.
  */
-
+  @media (max-width: 839px) {
 .o-crop {
   position: relative; /* [1] */
   display: block;
@@ -110,7 +110,7 @@ $inuit-crops: (
     transform: translateX(-50%);
   }
 
-
+}
 
 
 
