@@ -45,8 +45,14 @@
 		@media (min-width: 320px) {
 			p {font-size: 40px;}
 		}
-		@media (min-width: 600px) {
+		@media (min-width: 48px) {
 			p {font-size: 48px;}
+		}		
+		@media (min-width: 720px) {
+			p {font-size: 52px;}
+		}		
+		@media (min-width: 840px) {
+			p {font-size: 56px;}
 		}
 		@media (min-width: 960px) {
 			p {font-size: 56px;}
