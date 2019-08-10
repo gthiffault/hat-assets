@@ -2,13 +2,20 @@
 	&.-version-zero {
 		@include grid();		
     	@media (min-width: 320px) {
-            grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
-       		.c-content {
+            grid-template: repeat(2, [row] minmax(104px, 1fr))/repeat(1, [col] 1fr);
+            .c-content {
                 width: 100% !important;
                 margin-top: 0 !important;
-	    	}
-       		.c-image {
+            }
+            .c-content_wrap {
+                background: $bgTwo;
+                grid-column-start: 1;
+                grid-row-start: 1; 
+            }
+            .c-image {
                     display: grid;
+                 grid-column-start: 1;
+                grid-row-start: 2;  
                 div {
                     background-size: cover !important;
                     height: 100% !important;
@@ -17,37 +24,65 @@
                         display: none;
                     }
                 }                
-        	} 
+            } 
+        }
+        @media (min-width: 840px) {
+            grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
+            .c-content {
+                width: 100% !important;
+                margin-top: 0 !important;
+            }
+            .c-content_wrap {
+                background: $bgTwo;
+                grid-column-start: 2;
+                grid-row-start: 1; 
+            }
+            .c-image {
+                    display: grid;
+ grid-column-start: 1;
+                grid-row-start: 1;  
+                div {
+                    background-size: cover !important;
+                    height: 100% !important;
+                    width: 100%;
+                    &:before {
+                        display: none;
+                    }
+                }                
+            } 
+        }        
+        @media (min-width: 320px) {
+            background: #FFF;
         }
         @media (min-width: 320px) {
-            .o-wrapper.-two.-a {
+            .o-wrapper.-two.-b {
                 display: none;
             }      
             .-two.-c {
                 display: block;
             }         
         }
-    	@media (min-width: 1024px) {
+        @media (min-width: 1024px) {
             .c-content {
                 width: calc(100% + 25%) !important;
                 margin-top: 0 !important;
             }            
-            .o-wrapper.-two.-a {
+            .o-wrapper.-two.-b {
                 display: block;
             }
             .-two.-c {
                 display: none;
             }                
-    		grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
-       		.c-content_wrap {
+            grid-template: repeat(1, [row] minmax(104px, 1fr))/repeat(2, [col] 1fr);
+            .c-content_wrap {
+                background: $bgTwo;
+                grid-column-start: 2;
+                grid-row-start: 1; 
+            }
+            .c-image {
                 background: $bgTwo;
                 grid-column-start: 1;
                 grid-row-start: 1; 
-    		}
-       		.c-image {
-                background: $bgTwo;
-        		grid-column-start: 2;
-        		grid-row-start: 1; 
                 overflow: hidden;
                 div {
                     background-size: cover !important;
@@ -56,8 +91,8 @@
                         display: block;
                     }                    
                 }
-        	} 
-        }
+            } 
+        }   
 	}
 }
 .c-image-txt {
