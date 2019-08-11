@@ -74,7 +74,7 @@ padding: 0 20px;
 .pageslug-about,
 .pageslug-contribute {
     @media (min-width: 720px) {
-    @include title(110px,123px,-456px,-217px,-456px,-243px);
+    @include title(110px,123px,-456px,-243px,-456px,-117px);
     }
     @media (min-width: 840px) {
         @include title(123px,137px,0,-248px,0,-109px);
