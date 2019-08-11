@@ -374,7 +374,12 @@ height: 23px;
 width: 25px;
 display: inline-block;
 text-indent: -9999999px !important;
+@media (min-width: 320px) {
 display: flex;
+}
+@media (min-width: 1024px) {
+	display: none;
+}
 margin-right: 32px;
 					background-position: -194px -68px;
 					height: 22px;

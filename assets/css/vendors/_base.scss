@@ -1,7 +1,12 @@
 // Hamburger
 // ==================================================
 .hamburger {
-  display: flex;
+  @media (min-width: 320px) {
+display: flex;
+}
+@media (min-width: 1024px) {
+  display: none;
+}
   cursor: pointer;
   appearance: none;
   transition-property: opacity, filter;
