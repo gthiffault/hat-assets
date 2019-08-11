@@ -146,16 +146,6 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
     // Do something else, like open/close menu
   });
 
-
-function init() {
-var vidDefer = document.getElementsByTagName('iframe');
-for (var i=0; i<vidDefer.length; i++) {
-if(vidDefer[i].getAttribute('data-src')) {
-vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
-} } }
-window.onload = init;
-
-
 $(window).resize(function() {
 if($(window).innerWidth() >= 1280 ) {
             TweenLite.to($('.c-emergency_label'), 0.3, {
