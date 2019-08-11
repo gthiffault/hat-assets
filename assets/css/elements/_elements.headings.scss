@@ -73,7 +73,12 @@ padding: 0 20px;
 
 .pageslug-about,
 .pageslug-contribute {
-    @include title(123px,137px,0,-248px,0,-109px);
+    @media (min-width: 720px) {
+    @include title(110px,123px,-456px,-248px,-117px,-109px);
+    }
+    @media (min-width: 840px) {
+        @include title(123px,137px,0,-248px,0,-109px);
+    }    
 }
 .pageslug-contact {
     @include title(119px,131px,-311px,-244px,-311px,-109px);
