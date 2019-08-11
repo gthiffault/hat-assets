@@ -112,10 +112,10 @@ html {
 
 @mixin mt() {
 	@media (min-width: 320px) {
-		margin-top: 384px;
+		margin-top: 416px;
 	}			
 	@media (min-width: 600px) {
-		margin-top: 440px;
+		margin-top: 472px;
 	}		
 	@media (min-width: 720px) {
 		margin-top: 496px;
@@ -130,10 +130,10 @@ html {
 
 @mixin bannerHeight() {
 	@media (min-width: 320px) {
-		height: 384px;
+		height: 416px;
 	}		
 	@media (min-width: 600px) {
-		height: 440px;
+		height: 472px;
 	}		
 	@media (min-width: 720px) {
 		height: 496px;

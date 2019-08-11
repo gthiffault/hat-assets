@@ -35,7 +35,13 @@ h2 {
     line-height: 44px;
 }
 .c-header_banner h2 {
+@media (min-width: 320px) {
+    margin-top: 43px;
+}
+@media (min-width: 1024px) {
     margin-top: 70px;
+}    
+    
     .c-title_text {
         opacity: 0;
             text-shadow: 1px 1px 12px #1A1A1A;
@@ -75,7 +81,12 @@ padding: 0 20px;
 
 .pageslug-about,
 .pageslug-contribute {
+
     @media (min-width: 320px) {
+    @include title(94px,105px,-595px,-243px,-595px,-133px);
+    }
+
+    @media (min-width: 600px) {
     @include title(110px,123px,-456px,-243px,-456px,-117px);
     }
     @media (min-width: 840px) {

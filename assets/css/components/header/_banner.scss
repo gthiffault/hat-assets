@@ -35,11 +35,12 @@
 &:before {
 	@media (min-width: 320px) {
 top: 0;
+height: 86px;
 }
 @media (min-width: 1024px) {
-	
+height: 102px;
 }
-	height: 102px;
+	
 	width: 100%;
 	content: "";
 	position: absolute;
@@ -145,12 +146,14 @@ top: 0;
 &:before {
 @media (min-width: 320px) {
 top: 0;
+height: 86px;
 }
 @media (min-width: 1024px) {
 	top: 38px;
+	height: 102px;
 }
 
-	height: 102px;
+	
 	width: 100%;
 	content: "";
 	position: absolute;

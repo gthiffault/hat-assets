@@ -147,7 +147,13 @@ top: 0;
 		}		
 		.c-header_logo {
 			margin-right: auto;
-			padding: 20px 0;
+			
+@media (min-width: 320px) {
+	padding: 12px 0;
+}
+@media (min-width: 1024px) {
+	padding: 20px 0;
+}				
 			img {
 @media (min-width: 320px) {
 	max-width: 64px;
