@@ -99,6 +99,8 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
 
               });  
 
+              $('html,body').animate({scrollTop:0},100);
+
         },
 
       /* ==============================================================
@@ -107,7 +109,6 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
 
         onEnterCompleted: function() {
 
-          $('html,body').animate({scrollTop:0},100);
 
 function init() {
 var vidDefer = document.getElementsByTagName('iframe');
@@ -243,10 +244,6 @@ $('#form').submit(function(ev) {
     });
 });
 
-
-
-
-(function() {
     var secondary = new Headroom(document.querySelector(".c-header_navigation_secondary"), {
         tolerance: 5,
         offset : document.getElementById('page').offsetHeight - 86,
@@ -256,7 +253,7 @@ $('#form').submit(function(ev) {
           unpinned: "slideOutUp"
         }
     });
-    secondary.init();
+      secondary.init();
     var main = new Headroom(document.querySelector(".c-header_navigation_primary"), {
         tolerance: 5,
         offset : document.getElementById('page').offsetHeight - 86,
@@ -266,7 +263,16 @@ $('#form').submit(function(ev) {
           unpinned: "slideOutUp"
         }
     });
-    main.init();
+main.init();
+
+  $(document).on('ready',function() {
+  main.init();
+    econdary.init();
+  });
+
+
+(function() {
+
 
             var controllerFive = new ScrollMagic.Controller();
         if($('.c-quote').length) {
@@ -675,7 +681,6 @@ var logo = new Vivus('load', {
 /* ==================================================================
             #TRANSITION
           ================================================================== */
-
 
             TweenLite.to($('.c-title_top'), 0.5, {
               opacity:1,

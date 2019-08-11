@@ -1,6 +1,8 @@
 .c-quote {
 	padding: 96px 0 96px;
 	text-align: center;
+	position: relative;
+	background: #FFF;
 	.c-quote_author {
 		font-size: 24px;
 		margin-bottom: 0;
@@ -18,13 +20,21 @@
 			line-height: 64px;
 			line-height: 1.143em;
 			margin-bottom: 0;
+			position: relative;
+			z-index: 3;
 		}
 		&:before,		
 		&:after {
 			color: #EBEFF5;
-			font-size:220px;
+			@media (min-width: 320px) {
+				font-size:72px;
+				margin-top: 0;
+			}			
+			@media (min-width: 840px) {
+				font-size:220px;
+				margin-top: -24px;
+			}
 			font-style: italic;
-			margin-top: -24px;
 			position: absolute;
 			top: 50%;
 			transform: translate(0,-50%);	
@@ -32,11 +42,23 @@
 		}		
 		&:before {
 			content: " «";
-		    left: -102px;
+@media (min-width: 320px) {
+	left: -20px;
+}
+@media (min-width: 840px) {
+	left: -102px;
+}			
+		    
 		}
 		&:after {
 			content: "»";
-		    right: -94px;
+@media (min-width: 320px) {
+	right: -20px;
+}
+@media (min-width: 840px) {
+	right: -94px;
+}						
+		    
 		}			
 	}	
 	.c-quote_wrap_mobile {

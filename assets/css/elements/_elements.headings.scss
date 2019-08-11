@@ -92,13 +92,46 @@ padding: 0 20px;
 .c-page-title {
     color: #FFF;
     font-family: $fontDefault;
-    font-size: 56px;
+    
     font-weight: 600;  
     letter-spacing: 2px;
+    letter-spacing: 0.036em;
     line-height: 64px;
-    max-width: 720px;
+    line-height: 1.143em;
 
+@media (min-width: 320px) {
+    font-size: 22px;
+    max-width: 288px;    
+}
 
+@media (min-width: 375px) {
+    font-size: 24px;
+    max-width: 320px;    
+}
+
+@media (min-width: 400px) {
+    font-size: 26px;
+    max-width: 320px;    
+}
+
+@media (min-width: 480px) {
+    font-size: 32px;
+    max-width: 400px;    
+}
+
+@media (min-width: 600px) {
+    font-size: 40px;
+    max-width: 528px;    
+}
+
+@media (min-width: 720px) {
+    font-size: 48px;
+    max-width: 600px;    
+}
+@media (min-width: 840px) {
+    font-size: 56px;
+    max-width: 720px;    
+}
 
     position: static;
     stop-color: #FFF;
@@ -109,6 +142,10 @@ padding: 0 20px;
     &:after {
         display:none;
     }
+}
+
+.c-page-title:last-child {
+    margin-bottom: 12px;
 }
 
 h3 {
