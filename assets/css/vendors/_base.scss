@@ -1,7 +1,6 @@
 // Hamburger
 // ==================================================
 .hamburger {
-  padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
   cursor: pointer;
   appearance: none;
@@ -62,8 +61,7 @@
   &::after {
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
-    background-color: $hamburger-layer-color;
-    border-radius: $hamburger-layer-border-radius;
+    background-color: $colorPaleOne;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
