@@ -16,7 +16,7 @@
       
           onEnter: function() {
 
-
+ 
 
               TweenLite.to($('.barba-container'), 0, {
 
@@ -34,31 +34,11 @@
 
         onEnterCompleted: function() {
 
-              var secondary = new Headroom(document.querySelector(".c-header_navigation_secondary"), {
-        tolerance: 5,
-        offset : document.getElementById('page').offsetHeight - 86,
-        classes: {
-          initial: "animated",
-          pinned: "slideInDown",
-          unpinned: "slideOutUp"
-        }
-    });
-
-    var main = new Headroom(document.querySelector(".c-header_navigation_primary"), {
-        tolerance: 5,
-        offset : document.getElementById('page').offsetHeight - 86,
-        classes: {
-          initial: "animated",
-          pinned: "slideInDown",
-          unpinned: "slideOutUp"
-        }
-    });
 
 
-  setTimeout(function() {
-  main.init();
-    secondary.init(); 
-},100);
+  
+
+
   
   // Look for .hamburger
   var hamburger = document.querySelector(".hamburger");
@@ -680,8 +660,28 @@ if($(window).innerWidth() >= 1280 ) {
               delay:0.75
             });                          
             }  
+              var secondary = new Headroom(document.querySelector(".c-header_navigation_secondary"), {
+        tolerance: 5,
+        offset : document.getElementById('page').offsetHeight - 86,
+        classes: {
+          initial: "animated",
+          pinned: "slideInDown",
+          unpinned: "slideOutUp"
+        }
+    });
 
-           
+    var main = new Headroom(document.querySelector(".c-header_navigation_primary"), {
+        tolerance: 5,
+        offset : document.getElementById('page').offsetHeight - 86,
+        classes: {
+          initial: "animated",
+          pinned: "slideInDown",
+          unpinned: "slideOutUp"
+        }
+    });
+
+            main.init();
+    secondary.init();  
 
 
 
