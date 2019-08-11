@@ -93,6 +93,24 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
       
           onEnter: function() {
 
+
+
+              TweenLite.to($('.barba-container'), 0, {
+
+                  opacity: 1
+
+              });  
+
+              $('html,body').animate({scrollTop:0},100);
+
+        },
+
+      /* ==============================================================
+          #ON ENTER COMPLETED
+        ============================================================== */
+
+        onEnterCompleted: function() {
+
               var secondary = new Headroom(document.querySelector(".c-header_navigation_secondary"), {
         tolerance: 5,
         offset : document.getElementById('page').offsetHeight - 86,
@@ -114,28 +132,10 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
     });
 
 
-  
+  setTimeout(function() {
   main.init();
-    secondary.init();  
-
-              TweenLite.to($('.barba-container'), 0, {
-
-                  opacity: 1
-
-              });  
-
-              $('html,body').animate({scrollTop:0},100);
-
-        },
-
-      /* ==============================================================
-          #ON ENTER COMPLETED
-        ============================================================== */
-
-        onEnterCompleted: function() {
-
-
-
+    secondary.init(); 
+},100);
   
   // Look for .hamburger
   var hamburger = document.querySelector(".hamburger");
