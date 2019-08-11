@@ -110,6 +110,41 @@ html {
     }
 }
 
+@mixin mt() {
+	@media (min-width: 320px) {
+		margin-top: 384px;
+	}			
+	@media (min-width: 600px) {
+		margin-top: 440px;
+	}		
+	@media (min-width: 720px) {
+		margin-top: 496px;
+	}		
+	@media (min-width: 840px) {
+		margin-top: 540px;
+	}	
+	@media (min-width: 960px) {
+		margin-top: 616px;
+	}	
+}
+
+@mixin bannerHeight() {
+	@media (min-width: 320px) {
+		height: 384px;
+	}		
+	@media (min-width: 600px) {
+		height: 440px;
+	}		
+	@media (min-width: 720px) {
+		height: 496px;
+	}		
+	@media (min-width: 840px) {
+		height: 540px;
+	}	
+	@media (min-width: 960px) {
+		height: 616px;
+	}	
+}
 
 .lazyload,
 .lazyloading {

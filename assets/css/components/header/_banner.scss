@@ -119,10 +119,10 @@
 	}	
 	&.-page {
 		background: #2f2f2f;
-		height: 616px;
+		@include bannerHeight();	
 		.c-header_background-hero {
 			background-size: cover !important;
-			height: 616px;
+			@include bannerHeight();		
 			position: relative;
 			background-position: center !important;
 		}
@@ -131,7 +131,8 @@
 
 
 	main {
-		margin-top: 616px;
+@include mt();	
+	
 		position: relative;
 		background: #FFF;
 	@media (min-width: 320px) {
