@@ -93,7 +93,7 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
       
           onEnter: function() {
 
- 
+
 
               TweenLite.to($('.barba-container'), 0, {
 
@@ -112,7 +112,12 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
         onEnterCompleted: function() {
 
 
-
+$(window).resize(function() {
+  if($(window).innerWidth() >= 1024) {
+    $('html').removeClass('-js-menu-active');
+    $('.hamburger').removeClass('is-active');
+  }
+})
   
 
 
@@ -124,6 +129,7 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
     // Toggle class "is-active"
     hamburger.classList.toggle("is-active");
     // Do something else, like open/close menu
+    $('html').toggleClass('-js-menu-active');
   });
 
 $(window).resize(function() {

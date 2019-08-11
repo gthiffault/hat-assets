@@ -16,7 +16,7 @@
       
           onEnter: function() {
 
- 
+
 
               TweenLite.to($('.barba-container'), 0, {
 
@@ -35,7 +35,12 @@
         onEnterCompleted: function() {
 
 
-
+$(window).resize(function() {
+  if($(window).innerWidth() >= 1024) {
+    $('html').removeClass('-js-menu-active');
+    $('.hamburger').removeClass('is-active');
+  }
+})
   
 
 
@@ -47,6 +52,7 @@
     // Toggle class "is-active"
     hamburger.classList.toggle("is-active");
     // Do something else, like open/close menu
+    $('html').toggleClass('-js-menu-active');
   });
 
 $(window).resize(function() {
