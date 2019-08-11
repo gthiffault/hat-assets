@@ -32,6 +32,16 @@
 		}
 		.c-header_background-video {
 		    position: fixed;
+&:before {
+	height: 78px;
+	width: 100%;
+	content: "";
+	position: absolute;
+	background: rgba(42,42,42,0.4);
+	top: 0;
+	left: 0;
+	z-index: 234;
+}		    
 		    pointer-events: none;		  
 		    left: 0;
 		    width: 100vw;		  
@@ -126,6 +136,16 @@
 			position: relative;
 			background-position: center !important;
 		}
+&:before {
+	height: 102px;
+	width: 100%;
+	content: "";
+	position: absolute;
+	background: rgba(42,42,42,0.4);
+	top: 0;
+	left: 0;
+	z-index: 234;
+}			
 	}		
 }
 

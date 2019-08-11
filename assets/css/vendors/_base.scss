@@ -1,7 +1,7 @@
 // Hamburger
 // ==================================================
 .hamburger {
-  display: inline-block;
+  display: flex;
   cursor: pointer;
   appearance: none;
   transition-property: opacity, filter;
@@ -42,6 +42,9 @@
       background-color: $hamburger-active-layer-color;
     }
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .hamburger-box {
@@ -62,6 +65,7 @@
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
     background-color: $colorPaleOne;
+    box-shadow: 1px 1px 28px #000;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
