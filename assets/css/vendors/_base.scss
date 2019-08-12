@@ -1,6 +1,7 @@
 // Hamburger
 // ==================================================
 .hamburger {
+  padding: 0 !important;
   @media (min-width: 320px) {
 display: flex;
 }
