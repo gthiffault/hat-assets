@@ -1559,7 +1559,7 @@ $('#form').submit(function(ev) {
         success: function(response) {
             if (response.success) {
                 $('#thanks').fadeIn();
-                $('#o-form').find("input[type=text], textarea, select, input[type=email], input[type=select], input[type=radiobutton],input[type=file] ").val("");
+                $('#form').find("input[type=text], textarea, select, input[type=email], input[type=select], input[type=radiobutton],input[type=file] ").val("");
             } else {
                 // response.error will be an object containing any validation errors that occurred, indexed by field name
                 // e.g. response.error.fromName => ['From Name is required']
