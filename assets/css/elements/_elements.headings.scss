@@ -35,7 +35,8 @@ h1 {
     letter-spacing: 1px;
     line-height: 44px;
 }
-.c-header_banner h2 {
+.c-header_banner h2,
+.c-header_banner h1 {
 @media (min-width: 320px) {
     margin-top: 43px;
 }
