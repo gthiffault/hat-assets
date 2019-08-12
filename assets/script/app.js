@@ -956,7 +956,6 @@ $('#form').submit(function(ev) {
           }
         }
     });
-});
 
 
 
