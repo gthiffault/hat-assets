@@ -247,6 +247,9 @@ top: 56px;
 				}
 					&:last-child {
 						margin-right: 0;
+						&:after {
+							display: none;
+						}
 					}
 					a {
 						color: $colorPaleOne;
