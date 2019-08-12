@@ -88,7 +88,7 @@ html {
     $asdf: (107px/2) + 23px;
     $asdf2: (107px/2) + 22px;
     .c-header_banner {
-        h2 {
+        h1,h2 {
             .c-title_bottom {
                 background-position: $positionsx $positionsy;            	
                 height: $pageslug-aboutIconHeight;
