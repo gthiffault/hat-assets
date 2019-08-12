@@ -511,8 +511,8 @@ width: 25px;
     background: transparent;
     border: none;
     @media (min-width: 320px) {
-    	padding-left: 32px;
-    	margin-right: 32px;
+    	padding-left: 0;
+    	margin-right: 16px;
 	}    
     @media (min-width: 400px) {
     	padding-left: 32px;
