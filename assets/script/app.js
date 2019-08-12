@@ -556,6 +556,10 @@ $(document).ready(function() {
     });
 });
 
+
+$('.c-emergency_mobile_li').on('click', function() {
+  $(this).find('.c-emergency_mobile_ul').slideToggle();
+})
           
         },
 
