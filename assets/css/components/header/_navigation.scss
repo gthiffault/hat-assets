@@ -464,6 +464,8 @@ margin-right: 32px;
     	.c-header_navigation_mobile {
     		top: 86px;
     	}
+    }
+    .-js-menu-active {
     	&.-js-transition-menu {
     	.c-header_navigation_mobile {
     		top: -120vh;
@@ -471,6 +473,7 @@ margin-right: 32px;
     	}
     	}
     }
+   
 
 .c-header_navigation_mobile {
 	position: fixed;
