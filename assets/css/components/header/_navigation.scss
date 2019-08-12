@@ -328,6 +328,12 @@ top: 0;
 	
 
 	}
+
+.c-emergency_mobile_li {
+	position: absolute;
+}
+
+
 	.c-emergency_info {
 		background: $colorDarkOne;
 		height: 178px;
@@ -393,6 +399,8 @@ top: 0;
 			}			
 		}
 	}
+
+
 					.c-emergency_label {
 					    position: absolute;
 					    content: 'Urgence immmédiate';
@@ -543,4 +551,53 @@ margin-right: 32px;
 		padding-right: 52px;
 		padding-left:  52px;		
 	}					    
+}
+
+
+.c-emergency_mobile_li {
+	position: relative;
+.c-emergency_mobile_ul {
+    position: absolute;
+    right: 0;
+    top: 68px;
+    background: #171717;	
+.c-emergency_info_content {
+			left: 0;
+			opacity: 0;
+			padding: 40px 70px 40px 48px;
+			position: relative;
+			transition: opacity 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+			.c-emergency_title {
+				font-weight: 600;
+				letter-spacing: 1px;
+				line-height: 18px;
+				&.-main {
+					margin-bottom: 20px;
+					text-transform: uppercase;
+				}
+			}
+			.c-emergency_ul {
+				margin-bottom: 0;
+				li {
+					margin-bottom: 16px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}				
+			p {
+				margin-bottom: 0;
+			}
+			span {
+				display: block;
+				width: 100%;
+			}			
+			* {
+				color: #FFF;
+				font-size: 12px;
+				line-height: 18px;
+			}			
+		}    
+}
 }
