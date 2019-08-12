@@ -56,7 +56,7 @@
 	}
 	&.-contact {
 		background: $bgZero;		
-		padding: 72px 64px 106px;
+		padding: 72px 0 106px;
 		input[type="email"], 		
 		input[type="text"],
 		textarea {
@@ -140,5 +140,5 @@
 
 .c-form_donation {
 	background: $bgZero;
-	padding: 72px 64px 106px;	
+	padding: 72px 0 106px;	
 }
