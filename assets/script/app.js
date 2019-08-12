@@ -793,10 +793,27 @@ $('.c-header_navigation_mobile ul li a').on('click', function() {
   var hamburger = document.querySelector(".hamburger");
   // On click
   hamburger.addEventListener("click", function() {
+
+
+
+if($('.c-emergency_mobile_ul').is(':visible') {
+
+$(this).find('.c-emergency_mobile_ul').slideToggle();
+setTimeout(function() {
     // Toggle class "is-active"
     hamburger.classList.toggle("is-active");
     // Do something else, like open/close menu
     $('html').toggleClass('-js-menu-active');
+},500);
+} else {
+     // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+    // Do something else, like open/close menu
+    $('html').toggleClass('-js-menu-active');
+ 
+}
+
+
   });
 
 $(window).resize(function() {
