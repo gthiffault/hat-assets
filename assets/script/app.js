@@ -1563,7 +1563,6 @@ $('#form').submit(function(ev) {
             } else {
                 // response.error will be an object containing any validation errors that occurred, indexed by field name
                 // e.g. response.error.fromName => ['From Name is required']
-                alert('An error occurred. Please try again.');
             }
         }
     });
