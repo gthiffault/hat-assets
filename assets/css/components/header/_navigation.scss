@@ -492,6 +492,7 @@ top: 56px;
 	position: relative;
 	text-indent: 0;
 	&:before {
+		@media (min-width: 400px) {
 		content: "";
 		position: absolute;	
 	background: $sprite;
@@ -501,14 +502,22 @@ top: 56px;
 	height: 22px;
 	left: 0;	
 width: 25px;
-    top: -2px;		
+    top: -2px;
+}
 	}
 	@media (min-width: 320px) {
     display: flex;
     -webkit-appearance: none;
     background: transparent;
     border: none;
-    padding-left: 32px;
+    @media (min-width: 320px) {
+    	padding-left: 32px;
+    	margin-right: 32px;
+	}    
+    @media (min-width: 400px) {
+    	padding-left: 32px;
+    	margin-right: 32px;
+	}
 		&:focus {
 			outline: none;
 		}
@@ -516,7 +525,7 @@ width: 25px;
 @media (min-width: 1024px) {
 	display: none;
 }
-margin-right: 32px;
+
     width: auto;
     font-size: 14px;
     color: #FFF;
