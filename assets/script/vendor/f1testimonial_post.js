@@ -167,7 +167,7 @@ $('#form').submit(function(ev) {
     ev.preventDefault();
 
     // Send it to the server
-    $.ajax({
+    $.post({
         url: '/',
         dataType: 'json',
         data: $(this).serialize(),
