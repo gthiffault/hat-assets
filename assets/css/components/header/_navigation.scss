@@ -198,12 +198,12 @@ top: 56px;
 			align-items: center;			
 			display: flex;
 			flex: 0 auto;
-			li:last-child {
-				a {
+				.c-btn_contribute {
 					background: #4b6e9e;
-					padding: 12px;
+					padding: 12px 40px;
+					margin-top: 8px;
+					display: inline-block;
 				}
-			}
 		}		
 		.c-header_logo {
 			margin-right: auto;
