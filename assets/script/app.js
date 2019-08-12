@@ -904,7 +904,7 @@ $('.-emergency a').on('click', function() {
 })
 
 
-
+if($('#form').length) {
                 Parsley.addMessages('fr', {
                     defaultMessage: "Cette valeur semble non valide.",
                     type: {
@@ -964,7 +964,7 @@ $('#form').submit(function(ev) {
     });
 
 
-
+}
 
 
 
