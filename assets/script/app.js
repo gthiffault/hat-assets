@@ -251,7 +251,7 @@ $('#form').submit(function(ev) {
         success: function(response) {
             if (response.success) {
                 $('#thanks').fadeIn();
-                alert('32453');
+                
             } else {
                 // response.error will be an object containing any validation errors that occurred, indexed by field name
                 // e.g. response.error.fromName => ['From Name is required']
