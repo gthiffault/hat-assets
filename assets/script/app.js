@@ -906,12 +906,45 @@ $('#form').submit(function(ev) {
     // Prevent the form from actually submitting
     ev.preventDefault();
 
+
+                Parsley.addMessages('fr', {
+                    defaultMessage: "Cette valeur semble non valide.",
+                    type: {
+                    email:        "Cette valeur n'est pas un adresse courriel valide.",
+                    url:          "Cette valeur n'est pas une URL valide.",
+                    number:       "Cette valeur doit être un nombre.",
+                    integer:      "Cette valeur doit être un entier.",
+                    digits:       "Cette valeur doit être numérique.",
+                    alphanum:     "Cette valeur doit être alphanumérique."
+                    },
+                    notblank:       "Cette valeur ne peut pas être vide.",
+                    required:       "Ce champ est requis.",
+                    pattern:        "Cette valeur semble non valide.",
+                    min:            "Cette valeur ne doit pas être inférieure à %s.",
+                    max:            "Cette valeur ne doit pas excéder %s.",
+                    range:          "Cette valeur doit être comprise entre %s et %s.",
+                    minlength:      "Cette chaîne est trop courte. Elle doit avoir au minimum %s caractères.",
+                    maxlength:      "Cette chaîne est trop longue. Elle doit avoir au maximum %s caractères.",
+                    length:         "Cette valeur doit contenir entre %s et %s caractères.",
+                    mincheck:       "Vous devez sélectionner au moins %s choix.",
+                    maxcheck:       "Vous devez sélectionner %s choix maximum.",
+                    check:          "Vous devez sélectionner entre %s et %s choix.",
+                    equalto:        "Cette valeur devrait être identique."
+                });
+
+              window.Parsley.setLocale('fr')
+                $(function () {
+                    $('#o-form').parsley().on('form:validate', function (formInstance) {
+                        var ok = formInstance.isValid({group: 'block1', force: true}) && formInstance.isValid({group: 'block3', force: true}) && formInstance.isValid({group: 'block2', force: true}) && formInstance.isValid({group: 'email-form', force: true}) && formInstance.isValid({group: 'form-phone', force: true});
+                });
+
     // Send it to the server
     $.post({
         url: '/',
         dataType: 'json',
         data: $(this).serialize(),
         success: function(response) {
+          if($('#form').parsley().validate() == true) {
             if (response.success) {
                 $('#thanks').fadeIn();
                 $('#form').find("input[type=text], textarea, select, input[type=email], input[type=select], input[type=radiobutton],input[type=file] ").val("");
@@ -920,6 +953,7 @@ $('#form').submit(function(ev) {
                 // e.g. response.error.fromName => ['From Name is required']
                 alert('An error occurred. Please try again.');
             }
+          }
         }
     });
 });
