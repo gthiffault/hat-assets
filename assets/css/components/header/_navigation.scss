@@ -247,13 +247,14 @@ top: 0;
     -webkit-transform: scaleY(1);  
     transform: scaleY(1);}
 }
-    	
-    	&.-js-transition-menu {
-    		.c-header_navigation_primary {
+.-js-menu-active.-js-transition-menu {
+    .c-header_navigation_primary {
     	&:before {
-    		opacity: 0;
+    	-webkit-transform: scaleY(0);  
+    	transform: scaleY(0);}
     	}  
-}}}
+	}
+}
 
 
 
@@ -462,7 +463,7 @@ margin-right: 32px;
     	}
     	&.-js-transition-menu {
     	.c-header_navigation_mobile {
-    		opacity: 0;
+    		top: -120vh;
     	}
     	}
     }
