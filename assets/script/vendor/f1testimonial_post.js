@@ -820,7 +820,7 @@ $('#form').submit(function(ev) {
     ev.preventDefault();
 
     // Send it to the server
-    $.post({
+    $.ajax({
         url: '/',
         dataType: 'json',
         data: $(this).serialize(),
