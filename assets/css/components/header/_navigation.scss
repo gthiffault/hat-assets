@@ -265,14 +265,16 @@ top: 56px;
 						width: 12px;
 						background: #fff;
 						border-radius: 100%;
-						bottom: -52px;
+						bottom: -30px;
 						left: 50%;
+						opacity: 0;
 						margin-left: -6px;
-						transition: bottom 0.2s linear;
+						transition: bottom 0.2s linear, opacity 0.12s linear;
 					}
 					&.c-page-active:after,
 					&:hover:after {
 						bottom: -18px;
+						opacity: 1
 					}					
 				}
 			}
