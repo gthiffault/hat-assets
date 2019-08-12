@@ -116,6 +116,7 @@ $(window).resize(function() {
   if($(window).innerWidth() >= 1024) {
     $('html').removeClass('-js-menu-active');
     $('.hamburger').removeClass('is-active');
+    $('.c-emergency_mobile_ul').slideUp();
   }
 })
   

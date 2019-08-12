@@ -119,6 +119,7 @@
 
 	&.headroom--top {
 
+
 		&.slideInDown {
   			-webkit-animation-name: slideInDown;
   			animation-name: slideInDown;
@@ -135,7 +136,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: #171717;
+    background: rgba(23,23,23,1);
     bottom: 0;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
@@ -160,6 +161,14 @@ top: 0;
 	z-index: 2;
 
 	&.headroom--top {
+.c-emergency_mobile_ul {
+@media (min-width: 320px) {
+top: 86px;
+}
+@media (min-width: 480px) {
+top: 53px;	
+}
+}		
 background: rgba(42,42,42,.0);
 @media (min-width: 320px) {
 top: 0;
@@ -169,7 +178,14 @@ top: 0;
 }	
 }	
 	&.headroom--not-top {
-
+.c-emergency_mobile_ul {
+@media (min-width: 320px) {
+top: 89px;
+}
+@media (min-width: 480px) {
+top: 56px;	
+}
+}
 		top: 0;
 		transition: top 0.25s  linear,background 0.4s linear;
 		background: rgba(42,42,42,.8);
@@ -182,7 +198,12 @@ top: 0;
 			align-items: center;			
 			display: flex;
 			flex: 0 auto;
-			
+			li:last-child {
+				a {
+					background: #4b6e9e;
+					padding: 12px;
+				}
+			}
 		}		
 		.c-header_logo {
 			margin-right: auto;
@@ -449,6 +470,9 @@ display: inline-block;
 text-indent: -9999999px !important;
 @media (min-width: 320px) {
 display: flex;
+&:focus {
+	outline: none;
+}
 }
 @media (min-width: 1024px) {
 	display: none;
@@ -487,7 +511,7 @@ margin-right: 32px;
     padding-top: 64px; 
 	transition: top 0.3s linear;
     height: calc(100% - 86px);
-    background: rgba(23,23,23,0.82);
+    background: rgba(23,23,23,0.85);
     border: none;
     ul {
     	text-align: center;
@@ -550,6 +574,9 @@ margin-right: 32px;
 }
 
 .c-emergency_mobile_main {
+	&:focus {
+		outline: none;
+	}
 	margin-bottom: 0;
 	.c-emergency_mobile_li {
 
@@ -562,13 +589,11 @@ margin-right: 32px;
 			display: none;
 			@media (min-width: 320px) {
 				width: 100%;
-				top: 86px;
 				left: 0;
 			}			
 			@media (min-width: 480px) {
 				width: 340px;
 				right: 29px;
-				top: 53px;				
 				left: inherit;
 			}
 			position: absolute;
@@ -577,7 +602,20 @@ margin-right: 32px;
 
 			.c-emergency_info_content {
 			left: 0;
-			padding: 40px 70px 40px 48px;
+			padding: 40px 48px;
+
+	@media (min-width: 320px) {
+		padding: 40px 20px;		
+	}	
+	@media (min-width: 375px) {
+		padding: 40px 24px;		
+	}
+	@media (min-width: 400px) {
+padding: 40px 28px;		
+	}
+	@media (min-width: 480px) {
+padding: 40px 48px;		
+	}				
 			position: relative;
 			transition: opacity 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
