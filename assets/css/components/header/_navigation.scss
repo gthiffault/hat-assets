@@ -506,11 +506,10 @@ width: 25px;
 }
 	}
 	@media (min-width: 320px) {
-    display: flex;
-    -webkit-appearance: none;
-    background: transparent;
-    border: none;
-    @media (min-width: 320px) {
+    	display: flex;
+    	-webkit-appearance: none;
+    	background: transparent;
+	    border: none;
     	padding-left: 0;
     	margin-right: 16px;
 	}    
