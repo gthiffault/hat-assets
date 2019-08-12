@@ -16,8 +16,8 @@
       
           onEnter: function() {
 
-
-
+$('html').removeClass('-js-transition-menu');
+$('html').removeClass('-js-menu-active');
               TweenLite.to($('.barba-container'), 0, {
 
                   opacity: 1
@@ -43,7 +43,10 @@ $(window).resize(function() {
 })
   
 
-
+$('.c-header_navigation_mobile ul li a').on('click', function() {
+    $('html').addClass('-js-transition-menu');
+    $('.hamburger').removeClass('is-active');    
+})
   
   // Look for .hamburger
   var hamburger = document.querySelector(".hamburger");

@@ -244,10 +244,20 @@ top: 0;
 		&:before {
     transition-duration: 0.1s;
     transition-delay: 0.29s;			
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);}	
+    -webkit-transform: scaleY(1);  
+    transform: scaleY(1);}
 }
-}
+    	
+    	&.-js-transition-menu {
+    		.c-header_navigation_primary {
+    	&:before {
+    		opacity: 0;
+    	}  
+}}}
+
+
+
+
 .c-sidebar {
 	background: $colorDarkOne;
 	height: 178px;
@@ -449,6 +459,11 @@ margin-right: 32px;
     .-js-menu-active {
     	.c-header_navigation_mobile {
     		top: 86px;
+    	}
+    	&.-js-transition-menu {
+    	.c-header_navigation_mobile {
+    		opacity: 0;
+    	}
     	}
     }
 
