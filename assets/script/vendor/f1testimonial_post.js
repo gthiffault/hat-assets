@@ -845,7 +845,7 @@ $('.-emergency a').on('click', function() {
 
               window.Parsley.setLocale('fr')
                 $(function () {
-                    $('#o-form').parsley().on('form:validate', function (formInstance) {
+                    $('#form').parsley().on('form:validate', function (formInstance) {
                         var ok = formInstance.isValid({group: 'block1', force: true}) && formInstance.isValid({group: 'block3', force: true}) && formInstance.isValid({group: 'block2', force: true}) && formInstance.isValid({group: 'email-form', force: true}) && formInstance.isValid({group: 'form-phone', force: true});
                 });
               });
