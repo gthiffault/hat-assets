@@ -247,16 +247,17 @@ top: 0;
     -webkit-transform: scaleY(1);  
     transform: scaleY(1);}
 }
+}
 .-js-menu-active {
-&.-js-transition-menu {
-    .c-header_navigation_primary {
-    	&:before {
-    	display: none;
-    	}
+	&.-js-transition-menu {
+    	.c-header_navigation_primary {
+    		&:before {
+    			display: none;
+    		}
     	}  
 	}
 }
-}
+
 
 
 
@@ -465,7 +466,8 @@ margin-right: 32px;
     	}
     	&.-js-transition-menu {
     	.c-header_navigation_mobile {
-    		display: none;
+    		top: -120vh;
+    		transition: top 0.3s linear;
     	}
     	}
     }
