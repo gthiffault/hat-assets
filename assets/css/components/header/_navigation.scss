@@ -520,10 +520,11 @@ width: 25px;
 		&:focus {
 			outline: none;
 		}
-	}
+	
 @media (min-width: 1024px) {
 	display: none;
 }
+
 
     width: auto;
     font-size: 14px;
@@ -548,7 +549,7 @@ width: 25px;
     	}
     	}
     }
-   
+
 
 .c-header_navigation_mobile {
 	position: fixed;
@@ -568,6 +569,10 @@ width: 25px;
 @media (min-width: 600px) {
 	text-align: center;
 }    	
+
+
+
+
     li {
     	line-height: 56px;
     a {
