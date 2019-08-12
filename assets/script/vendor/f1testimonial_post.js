@@ -852,6 +852,8 @@ $('#form').submit(function(ev) {
                 });
               });
 
+ });
+
     // Send it to the server
     $.post({
         url: '/',
@@ -870,6 +872,8 @@ $('#form').submit(function(ev) {
           }
         }
     });
+
+
 
 
 
