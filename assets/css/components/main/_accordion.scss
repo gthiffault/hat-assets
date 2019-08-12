@@ -29,7 +29,14 @@
 			}
 		}		
 	}
-	ul {
+	&.-resources {
+		ul {
+			ul {}
+		}
+	}
+
+
+	> ul {
 		margin: 0;
 		li {			
 			list-style-type: none;
@@ -129,16 +136,4 @@
 				}			
 		}
 	}
-}
-
-.pageslug-resources {
-	.c-accordion {
-	.c-accordion_content_wrap {
-		.c-accordion_content {
-			ul {
-				margin-bottom: 24px !imporant;
-			}
-		}
-	}
-}
 }
