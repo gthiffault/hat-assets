@@ -29,17 +29,8 @@
 			}
 		}		
 	}
-	&.-resources {
-		ul {
-			ul {}
-		}
-	}
-
-
-	> ul {
-		margin: 0;
-	}
 	ul {
+		margin: 0;
 		li {			
 			list-style-type: none;
 			.c-accordion_content_wrap {
@@ -127,8 +118,8 @@
 				}
 			}
 			ul {
+				margin-bottom: 24px;
 				li {
-	}
     list-style: disc;
     list-style-position: inside;					
 				}
