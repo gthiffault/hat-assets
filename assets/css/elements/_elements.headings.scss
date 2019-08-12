@@ -107,6 +107,22 @@ padding: 0 20px;
 
 }
 
+.pageslug-faq {
+        @media (min-width: 320px) and (max-width: 408px) {
+            .c-title_text {
+                display: block;
+                line-height: 44px;
+            }
+            .c-title_top {
+                bottom: 104px !important;
+            }
+            .c-title_bottom {
+                top: 104px !important;
+            }
+        }
+}
+
+
 .pageslug-faq,
 .pageslug-media,
 .pageslug-resources {
