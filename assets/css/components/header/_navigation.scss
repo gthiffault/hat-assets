@@ -352,6 +352,7 @@ top: 56px;
 					height: 22px;
 					position: relative;
 					text-indent: 0;
+
 					&:hover {
 						cursor: pointer;
 					}
@@ -487,29 +488,36 @@ top: 56px;
 
 
 .c-emergency_mobile {
-background: $sprite;
-border:0;
-height: 23px;
-width: 25px;
-display: inline-block;
-text-indent: -9999999px !important;
-@media (min-width: 320px) {
-display: flex;
-&:focus {
-	outline: none;
-}
-}
+
+	position: relative;
+	text-indent: 0;
+	&:before {
+		content: "";
+		position: absolute;	
+	background: $sprite;
+	border:0;
+	height: 23px;
+	background-position: -194px -68px;
+	height: 22px;
+	left: 0;		
+	}
+	@media (min-width: 320px) {
+		display: flex;
+		&:focus {
+			outline: none;
+		}
+	}
 @media (min-width: 1024px) {
 	display: none;
 }
 margin-right: 32px;
-					background-position: -194px -68px;
-					height: 22px;
-					position: relative;
-					text-indent: 0;
-					&:hover {
-						cursor: pointer;
-					}	
+    width: auto;
+    font-size: 14px;
+    color: #FFF;
+
+	&:hover {
+		cursor: pointer;
+	}	
 }
 
 
