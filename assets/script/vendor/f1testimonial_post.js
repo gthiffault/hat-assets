@@ -815,9 +815,7 @@ $('.c-share_toggle').on('click', function() {
 $('.-emergency a').on('click', function() {
     $('.c-emergency_info').toggleClass('js-active');
 })
-$('#form').submit(function(ev) {
-    // Prevent the form from actually submitting
-    ev.preventDefault();
+
 
 
                 Parsley.addMessages('fr', {
@@ -852,7 +850,12 @@ $('#form').submit(function(ev) {
                 });
               });
 
- });
+$('#form').submit(function(ev) {
+    // Prevent the form from actually submitting
+    ev.preventDefault();
+
+
+
 
     // Send it to the server
     $.post({
@@ -872,6 +875,8 @@ $('#form').submit(function(ev) {
           }
         }
     });
+    });
+
 
 
 
