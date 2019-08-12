@@ -93,7 +93,8 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
       
           onEnter: function() {
 
-
+$('html').removeClass('-js-transition-menu');
+$('html').removeClass('-js-menu-active');
               TweenLite.to($('.barba-container'), 0, {
 
                   opacity: 1
@@ -109,9 +110,6 @@ y),b(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTim
         ============================================================== */
 
         onEnterCompleted: function() {
-
-$('html').removeClass('-js-transition-menu');
-$('html').removeClass('-js-menu-active');
 
 
 $(window).resize(function() {
