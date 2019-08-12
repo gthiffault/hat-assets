@@ -548,14 +548,14 @@ margin-right: 32px;
     	font-style: $fontDefault;
     	text-decoration: none;
     }
-			&:last-child {
-				a {
+
+				.c-btn_contribute {
 					background: #4b6e9e;
 					padding: 12px 40px;
 					margin-top: 8px;
 					display: inline-block;
 				}
-			}
+
 
 }
 }
