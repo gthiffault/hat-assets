@@ -126,6 +126,9 @@ html {
 	@media (min-width: 960px) {
 		margin-top: 616px;
 	}	
+	@media (min-width: 1280px) {
+		margin-top: 680px;
+	}		
 }
 
 @mixin bannerHeight() {
@@ -143,7 +146,10 @@ html {
 	}	
 	@media (min-width: 960px) {
 		height: 616px;
-	}	
+	}
+	@media (min-width: 1280px) {
+		height: 680px;
+	}		
 }
 
 .lazyload,
